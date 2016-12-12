@@ -6,7 +6,7 @@ Ce guide des lecteurs d'écran vous est proposé dans le cadre des ressources ac
 
 Il s'adresse à toute personne souhaitant évaluer l'accessibilité de ses composants HTML/JavaScript à l'aide d'un lecteur d'écran.
 
-Vous pouvez le [consulter en ligne](https://disic.github.io/guide_lecteurs-ecran/) ou le télécharger pour une consultation hors ligne.
+Vous pouvez le [consulter en ligne](https://disic.github.io/guide-lecteurs_ecran/) ou le télécharger pour une consultation hors ligne.
 
 ## Licence d’utilisation
 
