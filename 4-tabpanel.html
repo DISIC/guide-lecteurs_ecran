@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>Tabpanel - Guide sur les lecteurs d'écran</title>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+	<div class="main-header">
+
+		<div class="inside">
+			<ul class="skip-links">
+				<li><a href="#main">contenu</a></li>
+				<li><a href="#navigation">navigation</a></li>
+			</ul>
+
+			<header role="banner" class="header  clear" id="banner">
+				<h1 class="title">Guide sur les lecteurs d'écran</h1>
+			</header>
+
+			<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+				<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+				<ul class="sommaire is-hidden" id="sommaireToggle">
+					<li><a href="index.html">1. Introduction</a></li>
+					 <li>
+					 	<ul>
+							<li><a href="lecteur-ecran.html">Qu'est-ce qu'un lecteur d'écran&nbsp;?</a></li>
+					  <li><a href="environnement.html">À chaque environnement, ses lecteurs d’écran</a></li>
+				  	<li><a href="restitution.html">Comment un lecteur d'écran restitue l'information</a></li>
+						</ul>
+					 </li>
+						<li><a href="installation-config.html">2. Installation et configuration des lecteurs d’écran</a></li>
+						<li>
+							<ul>
+							<li><a href="jaws.html">Installation et configuration de <span lang="en">JAWS</span></a></li>
+					  <li><a href="nvda.html">Installation et configuration de NVDA</a></li>
+					  <li><a href="voiceover.html">Installation et configuration de <span lang="en">VoiceOver</span></a></li>
+						</ul>
+						</li>	
+					<li><a href="composants.html">3. Tester des composants ARIA avec un lecteur d'écran</a></li>
+					<li>
+						<ol>
+		<li><a lang="en" href="1-slider.html">Slider</a></li>
+		<li><a lang="en" href="2-progressbar.html">Progressbar</a></li>
+		<li><a lang="en" href="3-dialog.html">Dialog / Alert Dialog</a></li>
+		<li><a lang="en" href="4-tabpanel.html">Tabpanel</a></li>
+		<li><a lang="en" href="5-tooltip.html">Tooltip</a></li>
+		<li><a lang="en" href="6-button.html">Button</a></li>
+		<li><a lang="en" href="7-checkbox.html">Checkbox</a></li>
+		<li><a lang="en" href="8-menubar.html">Menubar</a></li>
+		<li><a lang="en" href="9-accordion.html">Accordion</a></li>
+		<li><a lang="en" href="10-tree.html">Tree</a></li>
+		<li><a lang="en" href="11-datepicker.html">DatePicker</a></li>
+		<li><a lang="en" href="12-autocomplete.html">Autocomplete</a></li>
+						</ol>
+					</li>
+<li><a href="ressources.html">4. Ressources</a></li>
+				</ul>
+			</nav>
+
+							<div class="github-link">
+				<p>
+					<a title="Contribuer / Télécharger sur Github" href="https://github.com/DISIC/guide-lecteurs_ecran">Contribuer / Télécharger</a>
+
+				</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="wrapper">
+
+			<nav role="navigation" class="internav clear">
+				<ul>
+					<li><a class="prev" href="3-dialog.html"><span aria-hidden="true"> &laquo; </span> Dialog</a></li>
+					<li><a class="next" href="5-tooltip.html">Tooltip <span aria-hidden="true"> &raquo; </span></a></li>
+				</ul>
+			</nav>
+
+			<main id="main" role="main">
+				<h1 class="fiche-title">Tabpanel</h1>
+				<article class="article">
+<h2>
+	Description
+</h2>		
+<div class="centre"><img src="img/tabpanel.jpg" alt="" /></div>
+	
+		<p>Ce composant permet d'afficher des contenus sous la forme d'un système d'onglets&nbsp;: les contenus de chaque onglet sont masqués jusqu'à ce que l'utilisateur clique sur l'onglet, un seul onglet peut être affiché à la fois.</p>
+		<h3>Restitution</h3>
+		<ul>
+		<li>Chaque onglet doit posséder un <a href="https://www.w3.org/TR/accname-aam-1.1/#dfn-accessible-name"><strong>nom accessible</strong> (ressource en anglais)</a>.</li>
+		<li>L'onglet actif et sa position dans la liste des onglets doit être vocalisé.</li>
+		<li>le contenu de chaque panneau est vocalisé automatiquement ou sur action de l'utilisateur lorsqu'il interagit avec le contenu.</li>
+		</ul>
+		<h3>Interactions de base au clavier</h3>
+		<p>Les interactions au clavier sont&nbsp;:</p>
+		<ul>
+		<li>Les flèches <kbd>haut</kbd> ou <kbd>droite</kbd> permettent de passer à l'onglet suivant.</li>
+		<li>Les flèches <kbd>bas</kbd> ou <kbd>gauche</kbd> permettent de passer à l'onglet précédent.</li>
+		<li>La tabulation permet d'atteindre chaque élément interactif de l'onglet affiché.</li>
+		<li>Les touches <kbd>Espace</kbd> et <kbd>Entrée</kbd> permettent d'afficher l'onglet sélectionné lorsque son contenu n'est pas afiché automatiquement.</li>
+		</ul>
+		<p><strong>Motif de conception</strong>&nbsp;: <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel" lang="en">Tabpanel</a> (<span lang="en">WAI-ARIA Authoring Practices 1.1</span>)</p>	
+		<h3><a href="http://disic.github.io/rgaa_composants_javascript/#tabpanel">Exemple de <span lang="en">Tabpanel</span></a></h3>
+<p>Cet exemple propose 3 panneaux (ou onglets) contenant soit du texte, soit du texte et des liens.</p>
+</article>
+
+<article class="article">
+<h2>Test du <span lang="en">tabpanel</span> avec JAWS</h2>
+<h3>Étape 1</h3>
+
+	<ol>
+<li>Utiliser la flèche du bas pour aller jusqu'au premier onglet. <br/>JAWS annonce&nbsp;: «&nbsp;panneau 1, onglet sélectionné&nbsp;».</li>
+<li>Faire le même test à l'aide de la touche <kbd>Tabulation</kbd>.</li>
+<li>JAWS passe en mode formulaire. Si ce n'est pas le cas, l'activer avec <kbd>Entrée</kbd>. JAWS annonce «&nbsp;onglet, panneau 1, sélectionné, appuyez sur touche JAWS&nbsp;+&nbsp;alt&nbsp;+&nbsp;m pour atteindre l'élément contrôlé&nbsp;».</li>
+</ol>
+<h3>Étape 2</h3>
+<ol>
+	<li>Utiliser la touche <kbd>Tabulation</kbd> pour aller sur le contenu du premier onglet. JAWS annonce «&nbsp;édition, panneau des onglets, contenu du panneau 1&nbsp;».</li>
+<li>Appuyer sur <kbd>Majuscule&nbsp;+&nbsp;Tabulation</kbd> pour revenir au titre de l'onglet. JAWS annonce de nouveau «&nbsp;onglet, panneau 1, sélectionné, appuyez sur touche JAWS&nbsp;+&nbsp;alt&nbsp;+&nbsp;m pour atteindre l'élément contrôlé&nbsp;».</li>
+</ol>
+<h3>Étape 3</h3>
+<ol>
+<li>Utiliser les flèches de direction pour vous déplacer d'onglet en onglet. JAWS annonce «&nbsp;onglet panneau 2 sélectionné, appuyez sur touche JAWS&nbsp;+&nbsp;maj&nbsp;+&nbsp;m pour lire le descriptif&nbsp;».</li>
+<li>Lorsque vous tabulez dans le contenu du panneau 3, JAWS quitte le mode formulaire et positionne le curseur sur le lien qui peut être activé.</li>	
+</ol>
+</article>
+
+<article class="article">
+<h2>Test du <span lang="en">tabpanel</span> avec NVDA</h2>
+<h3>Étape 1</h3>
+<ol>
+<li>Utiliser la flèche du bas pour aller jusqu'au premier onglet. <br />NVDA annonce&nbsp;: «&nbsp;onglet sélectionné panneau 1&nbsp;».</li>
+<li>Faire le même test à l'aide de la touche <kbd>Tabulation</kbd>. <br />NVDA annonce «&nbsp;panneau 1, onglet sélectionné&nbsp;». Si vous avez paramétré NVDA pour qu'il active le mode formulaire au déplacement du focus, celui-ci s'activera automatiquement. Mais ce n'est pas le cas lorsque vous vous déplacez avec les flèches.</li>
+<li>Si le mode formulaire ne s'active pas, le déclencher à l'aide des touches <kbd>NVDA&nbsp;+&nbsp;Espace</kbd>.</li>
+<li>Lorsque le mode formulaire s'active, NVDA annonce «&nbsp;Panneau 1, onglet sélectionné, 1 sur 3&nbsp;».</li>
+</ol>
+<h3>Étape 2</h3>
+<ol>
+	<li>Utiliser la touche <kbd>Tabulation</kbd> pour aller sur le contenu du premier onglet. NVDA quitte le mode formulaire et annonce «&nbsp;contenu du panneau 1, titre de niveau 4&nbsp;».</li>
+<li>Appuyer sur <kbd>Majuscule&nbsp;+&nbsp;Tabulation</kbd> pour revenir au titre de l'onglet. NVDA retourne en mode formulaire et annonce de nouveau «&nbsp;onglet, panneau 1, onglet sélectionné 1 sur 3.&nbsp;»</li>
+</ol>
+<h3>Étape 3</h3>
+<ol>
+
+<li>Utiliser les flèches de direction pour vous déplacer d'onglet en onglet. NVDA annonce «&nbsp;panneau 2, onglet sélectionné 2 sur 3, panneau 3, onglet sélectionné 3 sur 3&nbsp;».</li>
+<li>Lorsque vous tabulez dans le contenu du panneau 3, NVDA quitte à nouveau le mode formulaire et positionne le curseur sur le lien qui peut être activé.</li>
+</ol>
+</article>
+
+<article class="article">
+<h2>Test du <span lang="en">tabpanel</span> avec <span lang="en">VoiceOver</span></h2>
+<h3>Étape 1</h3>
+<ol>
+<li>Utiliser la touche <kbd>Tabulation</kbd> pour atteindre le premier onglet. <br /><span lang="en">VoiceOver</span> annonce&nbsp;: «&nbsp;Panneau 1 sélectionné, onglet 1 sur 3. Vous êtes actuellement sur onglet, pour sélectionner cette option, appuyez sur <kbd>VO&nbsp;+&nbsp;Espace</kbd>&nbsp;».</li>	
+</ol>
+<h3>Étape 2</h3>
+<ol>
+	<li>Utiliser la touche <kbd>Tabulation</kbd> pour aller sur le contenu du premier onglet. <br /><span lang="en">VoiceOver</span> annonce «&nbsp;niveau d'en-tête 4, contenu du panneau 1&nbsp;».</li>
+<li>Revenir au titre du panneau 1 à l'aide des touches <kbd>Majuscule&nbsp;+&nbsp;Tabulation</kbd>. <br /><span lang="en">VoiceOver</span> annonce à nouveau «&nbsp;panneau 1, sélectionné, onglet 1 sur 3&nbsp;».</li>
+</ol>
+<h3>Étape 3</h3>
+<ol>
+<li>Utiliser les flèches de direction pour aller d'un onglet à l'autre. <br /><span lang="en">VoiceOver</span> annonce «&nbsp;panneau N sélectionné, [N sur total]&nbsp;». Si on sélectionne un onglet avec <kbd>VO&nbsp;+&nbsp;Espace</kbd>, <span lang="en">VoiceOver</span> annonce juste le [numéro de l'onglet] tableau d'onglets.<br/>
+<strong>Note</strong>&nbsp;: lorsqu'on utilise les flèches de direction avec la navigation désactivée, <span lang="en">VoiceOver</span> sélectionne automatiquement l'onglet sur lequel est positionné le curseur. Si vous vous déplacez avec le raccourci <kbd>VO&nbsp;+&nbsp;flèches</kbd>, il faudra confirmer la sélection de l'onglet à l'aide des touches <kbd>VO&nbsp;+&nbsp;Espace</kbd>.</li>
+<li>Sélectionner le troisième onglet à l'aide des flèches et utiliser la touche <kbd>Tabulation</kbd> pour aller dans le contenu de ce panneau. <br /><span lang="en">VoiceOver</span> annonce&nbsp;: «&nbsp;lien, exemple de lien&nbsp;», le contenu du panneau 3.</li>
+</ol>
+				</article>
+
+				</main>
+
+				<footer id="footer" role="contentinfo" class="clear">
+					<h2>Licence d'utilisation</h2>
+					<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l'action publique"></a></p>
+					<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l'action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+				</footer>
+
+			</div>
+
+			<script src="js/script.js"></script>
+
+		</body>
+		</html>

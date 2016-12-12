@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>Datepicker - Guide sur les lecteurs d'écran</title>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+	<div class="main-header">
+
+		<div class="inside">
+			<ul class="skip-links">
+				<li><a href="#main">contenu</a></li>
+				<li><a href="#navigation">navigation</a></li>
+			</ul>
+
+			<header role="banner" class="header  clear" id="banner">
+				<h1 class="title">Guide sur les lecteurs d'écran</h1>
+			</header>
+
+			<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+				<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+				<ul class="sommaire is-hidden" id="sommaireToggle">
+					<li><a href="index.html">1. Introduction</a></li>
+					 <li>
+					 	<ul>
+							<li><a href="lecteur-ecran.html">Qu'est-ce qu'un lecteur d'écran&nbsp;?</a></li>
+					  <li><a href="environnement.html">À chaque environnement, ses lecteurs d’écran</a></li>
+				  	<li><a href="restitution.html">Comment un lecteur d'écran restitue l'information</a></li>
+						</ul>
+					 </li>
+						<li><a href="installation-config.html">2. Installation et configuration des lecteurs d’écran</a></li>
+						<li>
+							<ul>
+							<li><a href="jaws.html">Installation et configuration de <span lang="en">JAWS</span></a></li>
+					  <li><a href="nvda.html">Installation et configuration de NVDA</a></li>
+					  <li><a href="voiceover.html">Installation et configuration de <span lang="en">VoiceOver</span></a></li>
+						</ul>
+						</li>	
+					<li><a href="composants.html">3. Tester des composants ARIA avec un lecteur d'écran</a></li>
+					<li>
+						<ol>
+		<li><a lang="en" href="1-slider.html">Slider</a></li>
+		<li><a lang="en" href="2-progressbar.html">Progressbar</a></li>
+		<li><a lang="en" href="3-dialog.html">Dialog / Alert Dialog</a></li>
+		<li><a lang="en" href="4-tabpanel.html">Tabpanel</a></li>
+		<li><a lang="en" href="5-tooltip.html">Tooltip</a></li>
+		<li><a lang="en" href="6-button.html">Button</a></li>
+		<li><a lang="en" href="7-checkbox.html">Checkbox</a></li>
+		<li><a lang="en" href="8-menubar.html">Menubar</a></li>
+		<li><a lang="en" href="9-accordion.html">Accordion</a></li>
+		<li><a lang="en" href="10-tree.html">Tree</a></li>
+		<li><a lang="en" href="11-datepicker.html">DatePicker</a></li>
+		<li><a lang="en" href="12-autocomplete.html">Autocomplete</a></li>
+						</ol>
+					</li>
+<li><a href="ressources.html">4. Ressources</a></li>
+				</ul>
+			</nav>
+
+							<div class="github-link">
+				<p>
+					<a title="Contribuer / Télécharger sur Github" href="https://github.com/DISIC/guide-lecteurs_ecran">Contribuer / Télécharger</a>
+
+				</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="wrapper">
+
+			<nav role="navigation" class="internav clear">
+				<ul>
+					<li><a class="prev" lang="en" href="10-tree.html"><span aria-hidden="true"> &laquo; </span> Tree</a></li>
+					<li><a class="next" lang="en" href="12-autocomplete.html">Autocomplete <span aria-hidden="true"> &raquo; </span></a></li>
+				</ul>
+			</nav>
+
+			<main id="main" role="main">
+				<h1 class="fiche-title" lang="en">DatePicker</h1>
+				<article class="article">
+		<h2>Description</h2>
+		<div class="centre">
+			<img src="img/datepicker.jpg" alt="" />
+		</div>
+		<p>Ce composant permet d'implémenter un calendrier de saisie, analogue au type <code>"date"</code> de HTML5.</p>
+		<h3>Restitution</h3>
+		<ul>
+		<li>Le jour sélectionné doit être vocalisé.</li>
+		<li>Lorsque l'utilisateur change de mois, le mois sélectionné est vocalisé.</li>
+		<li>Lorsque l'utilisateur change d'année, l'année sélectionnée est vocalisée.</li>
+		</ul>
+		<h3>Interactions de base au clavier</h3>
+		<p>Les interactions au clavier sont&nbsp;:</p>
+		<ul>
+		<li>À la première activation du calendrier de saisie, la touche <kbd>Majuscule&nbsp;+&nbsp;Tabulation</kbd> permet d'atteindre la date du jour dans l'ordre de la séquence de tabulation, en <em>avant</em> ou en <em>arrière</em>.</li>
+		<li>Les flèches <kbd>haut</kbd> et <kbd>bas</kbd> permettent de sélectionner le jour équivalent pour la semaine suivante ou précédente. Si la première ou la dernière semaine du mois en cours est atteinte, le processus se poursuit pour le mois suivant ou précédent.</li>
+		<li>Les flèches <kbd>gauche</kbd> et <kbd>droite</kbd> permettent de sélectionner la date suivante ou précédente. Si le premier ou le dernier jour est atteint, le processus se poursuit pour le mois suivant ou précédent.</li>
+		<li>Les touches <kbd>Espace</kbd> et <kbd>Entrée</kbd> permettent de sélectionner la date en cours.</li>
+		<li>Si le calendrier de saisie est proposé sous la forme d'une fenêtre, la touche <kbd>Échap</kbd> ferme la fenêtre.</li>
+		</ul>
+		<p><strong>Motif de conception</strong>&nbsp;: <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion" lang="en">Accordion</a> (<span lang="en">WAI-ARIA Authoring Practices 1.1</span>)</p>		
+		<h3><a href="http://disic.github.io/rgaa_composants_javascript/#datepicker">Exemple de <span lang="en">DatePicker</span></a></h3>
+		</article><article class="article"><h2>Test du sélecteur de dates avec JAWS</h2>
+		<h3>Étape 1</h3>
+		<ol>
+			<li>Utiliser la touche <kbd>Tabulation</kbd> pour atteindre le calendrier. <br />JAWS annonce «&nbsp;tableau vec x lignes et x colones,&nbsp;+&nbsp;[nom du jour]e&nbsp;+&nbsp;[numéro du jour]&nbsp;».</li>
+		</ol>
+		<h3>Étape 2</h3>
+		<ol>
+			<li>Se déplacer avec les flèches de direction pour sélectionner une entrée de calendrier. JAWS annonce le « [nom du jour] et le [numéro du jour] ».</li>
+		<li>Utiliser les touches <kbd>Majuscule&nbsp;+&nbsp;Tabulation</kbd> pour atteindre le bouton «&nbsp;suivant&nbsp;». L'activer avec la barre d'espace. <br />JAWS annonce «&nbsp;hors du tableau bouton suivant&nbsp;» et le mois sélectionné lorsqu'on active le bouton.</li>
+		</ol>
+		<h3>Étape 3</h3>
+		<ol>
+		<li>Utiliser à nouveau la touche <kbd>Tabulation</kbd> pour retourner dans le calendrier. JAWS annonce à nouveau le jour sélectionné.</li>
+		<li>Choisir un jour avec les flèches et valider avec la touche <kbd>Entrée</kbd>. <br />JAWS quitte le mode formulaire et se positionne sur le champ de saisie où s'inscrit la date sélectionnée. Il vocalise cette date en annonçant&nbsp;: «&nbsp;Hors du tableau, fin de la région d'application, édition date jj/mm/aaa&nbsp;».</li>
+ 		</ol>
+		</article><article class="article"><h2>Test du sélecteur de dates avec NVDA</h2>
+		<h3>Étape 1</h3>
+		<ol>
+			<li>Utiliser la touche <kbd>Tabulation</kbd> pour atteindre le calendrier. <br />NVDA annonce «&nbsp;Application, [mois et année en cours] tableau éditable, date du jour, cadre de texte&nbsp;».</li>
+		<li>NVDA entre mode application sans prévenir l'utilisateur avec un signal sonore. Appuyer sur <kbd>NVDA &nbsp;+&nbsp; Espace</kbd> pour activer le mode formulaire s'il ne l'est pas.</li>
+		</ol>
+		<h3>Étape 2</h3>
+		<ol>
+					<li>Se déplacer avec les flèches de direction pour sélectionner une entrée de calendrier. <br />NVDA vocalise le jour de la semaine et la date, le numéro de colonne du tableau suivis de «&nbsp;cadre de texte&nbsp;».</li>
+					<li>Utiliser les touches <kbd>Majuscule&nbsp;+&nbsp;Tabulation</kbd> pour atteindre le bouton «&nbsp;suivant&nbsp;». L'activer avec la barre d'espace. NVDA annonce le mois suivant.</li>
+		</ol>
+		<h3>Étape 3</h3>
+		<ol>
+		<li>Utiliser à nouveau la touche <kbd>Tabulation</kbd> pour retourner dans le calendrier. NVDA annonce à nouveau le jour sélectionné.</li>
+		<li>Choisir un jour avec les flèches et valider avec la touche <kbd>Entrée</kbd>. NVDA quitte le mode formulaire et se positionne sur le champ de saisie où s'inscrit la date sélectionnée. NVDA vocalise cette date en annonçant&nbsp;: «&nbsp;édition avec auto-complétion [date du jour]&nbsp;».</li>
+		</ol>
+		</article>
+
+		<article class="article"><h2>Test du sélecteur de date avec <span lang="en">VoiceOver</span></h2>
+				<h3>Étape 1</h3>
+				<ol>
+					<li>Utiliser la touche <kbd>Tabulation</kbd> pour atteindre le calendrier. <br /><span lang="en">VoiceOver</span> annonce&nbsp;: «&nbsp;[date du jour], [mois actuel], tableau X colonnes, x lignes.&nbsp;»</li>
+				</ol>
+		<h3>Étape 2</h3>
+		<ol>
+			<li>Se déplacer avec les flèches de direction pour sélectionner une date. <span lang="en">VoiceOver</span> annonce le jour et la date, suivi de groupe.</li>
+<li>Utiliser <kbd>Majuscule&nbsp;+&nbsp;Tabulation</kbd> pour atteindre le bouton «&nbsp;suivant&nbsp;». <span lang="en">VoiceOver</span> annonce «&nbsp;suivant bouton, principal 1 élément&nbsp;».</li>
+<li>Activer le bouton avec <kbd>VO&nbsp;+&nbsp;Espace</kbd>. <span lang="en">VoiceOver</span> annonce&nbsp;: «&nbsp;appuyé, suivant&nbsp;».</li>
+		</ol>
+		<h3>Étape 3</h3>
+<ol>
+<li>Tabuler à nouveau dans le calendrier. Choisir un jour avec les flèches et valider avec <kbd>Entrée</kbd>. <span lang="en">VoiceOver</span> n'annonce pas que le jour a été sélectionné.</li>
+<li>Appuyer sur la touche <kbd>Tabulation</kbd> pour sortir du calendrier. Vous arrivez sur le champ de saisie où la date choisie s'est inscrite. <span lang="en">VoiceOver</span> annonce&nbsp;: «&nbsp;[date du jour], contenu sélectionné, date jj/mm/aaaa, modifiez le texte&nbsp;».</li>
+</ol>
+				</article>
+
+				</main>
+
+				<footer id="footer" role="contentinfo" class="clear">
+					<h2>Licence d'utilisation</h2>
+					<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l'action publique"></a></p>
+					<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l'action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+				</footer>
+
+			</div>
+
+			<script src="js/script.js"></script>
+
+		</body>
+		</html>

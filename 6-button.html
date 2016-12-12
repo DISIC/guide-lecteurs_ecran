@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>Button - Guide sur les lecteurs d'écran</title>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+	<div class="main-header">
+
+		<div class="inside">
+			<ul class="skip-links">
+				<li><a href="#main">contenu</a></li>
+				<li><a href="#navigation">navigation</a></li>
+			</ul>
+
+			<header role="banner" class="header  clear" id="banner">
+				<h1 class="title">Guide sur les lecteurs d'écran</h1>
+			</header>
+
+			<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+				<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+				<ul class="sommaire is-hidden" id="sommaireToggle">
+					<li><a href="index.html">1. Introduction</a></li>
+					 <li>
+					 	<ul>
+							<li><a href="lecteur-ecran.html">Qu'est-ce qu'un lecteur d'écran&nbsp;?</a></li>
+					  <li><a href="environnement.html">À chaque environnement, ses lecteurs d’écran</a></li>
+				  	<li><a href="restitution.html">Comment un lecteur d'écran restitue l'information</a></li>
+						</ul>
+					 </li>
+						<li><a href="installation-config.html">2. Installation et configuration des lecteurs d’écran</a></li>
+						<li>
+							<ul>
+							<li><a href="jaws.html">Installation et configuration de <span lang="en">JAWS</span></a></li>
+					  <li><a href="nvda.html">Installation et configuration de NVDA</a></li>
+					  <li><a href="voiceover.html">Installation et configuration de <span lang="en">VoiceOver</span></a></li>
+						</ul>
+						</li>	
+					<li><a href="composants.html">3. Tester des composants ARIA avec un lecteur d'écran</a></li>
+					<li>
+						<ol>
+		<li><a lang="en" href="1-slider.html">Slider</a></li>
+		<li><a lang="en" href="2-progressbar.html">Progressbar</a></li>
+		<li><a lang="en" href="3-dialog.html">Dialog / Alert Dialog</a></li>
+		<li><a lang="en" href="4-tabpanel.html">Tabpanel</a></li>
+		<li><a lang="en" href="5-tooltip.html">Tooltip</a></li>
+		<li><a lang="en" href="6-button.html">Button</a></li>
+		<li><a lang="en" href="7-checkbox.html">Checkbox</a></li>
+		<li><a lang="en" href="8-menubar.html">Menubar</a></li>
+		<li><a lang="en" href="9-accordion.html">Accordion</a></li>
+		<li><a lang="en" href="10-tree.html">Tree</a></li>
+		<li><a lang="en" href="11-datepicker.html">DatePicker</a></li>
+		<li><a lang="en" href="12-autocomplete.html">Autocomplete</a></li>
+						</ol>
+					</li>
+<li><a href="ressources.html">4. Ressources</a></li>
+				</ul>
+			</nav>
+
+							<div class="github-link">
+				<p>
+					<a title="Contribuer / Télécharger sur Github" href="https://github.com/DISIC/guide-lecteurs_ecran">Contribuer / Télécharger</a>
+
+				</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="wrapper">
+
+			<nav role="navigation" class="internav clear">
+				<ul>
+					<li><a class="prev" href="5-tooltip.html"><span aria-hidden="true"> &laquo; </span> Tooltip</a></li>
+					<li><a class="next" href="7-checkbox.html">Checkbox <span aria-hidden="true"> &raquo; </span></a></li>
+				</ul>
+			</nav>
+
+			<main id="main" role="main">
+				<h1 lang="en" class="fiche-title">Button</h1>
+				<article class="article">
+<h2>Description</h2>
+<div class="centre">
+	<img src="img/bouton.jpg" alt="" />
+</div>
+		<p>Ce composant permet d'implémenter un bouton d'action, équivalent à l'élément HTML <code>&lt;button&gt;</code>.</p>
+		<h3>Restitution</h3>
+		<ul>
+		<li>le composant doit posséder un <em>nom accessible ;</em></li>
+		<li>l'état <em>activé</em> ou <em>désactivé</em> doit être vocalisé.</li>
+		</ul>
+		<h3>Interactions de base au clavier</h3>
+		<p>Les interactions au clavier sont&nbsp;:</p>
+		<ul>
+		<li>La touche <kbd>Espace</kbd> doit déclencher le bouton.</li>
+		</ul>
+		<p><strong>Motif de conception</strong>&nbsp;: <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#button" lang="en">Button</a> (<span lang="en">WAI-ARIA Authoring Practices 1.1</span>)</p>
+		
+		<h3><a href="http://disic.github.io/rgaa_composants_javascript/#button">Exemples de boutons</a></h3>
+		</article><article class="article"><h2>Test des boutons avec JAWS</h2>
+
+		<h3>Étape 1</h3>
+		<ol>
+		<li>Utiliser la touche <kbd>Tabulation</kbd> pour atteindre chacun des trois boutons de l'exemple.</li>
+		<li>Le premier bouton est actif. JAWS annonce&nbsp;: «&nbsp;Bouton, Confirmer votre message - 1&nbsp;».</li>
+		<li>Activer ce bouton à l'aide de la touche <kbd>Espace</kbd>. <br />JAWS annonce&nbsp;: «&nbsp;Boîte de dialogue, message from web page&nbsp;: bouton 1 votre message est confirmé. bouton OK. Pour l'activer, barre Espace&nbsp;».</li>
+		<li>Confirmer à l'aide de la touche <kbd>Espace</kbd>.</li>
+		</ol>
+		<h3>Étape 2</h3>
+		<ol>
+			<li>Le second bouton est désactivé. <br />JAWS annonce&nbsp;: «&nbsp;bouton, confirmer votre message - 2, non disponible.&nbsp;». Lorsque vous appuyez sur le bouton à l'aide de la touche <kbd>Espace</kbd>, rien ne se passe.</li>
+		
+		</ol>
+		<h3>Étape 3</h3>
+			<ol>
+				<li>Le troisième bouton est actif et labellisé avec un passage de texte. JAWS annonce&nbsp;: «&nbsp;Bouton, confirmer votre message - 3&nbsp;».</li>
+				<li>Activer ce bouton à l'aide de la touche <kbd>Espace</kbd>. <br />JAWS annonce&nbsp;: «&nbsp;Boîte de dialogue, message from web page&nbsp;: bouton 3 votre message est confirmé. Bouton OK. Pour l'activer, barre Espace&nbsp;».</li>
+						<li>Confirmer à l'aide de la touche <kbd>Espace</kbd>.</li>
+			</ol>
+				
+		</article><article class="article"><h2>Test des boutons avec NVDA</h2>
+
+		<h3>Étape 1</h3>
+		<ol>
+			<li>Utiliser la touche <kbd>Tabulation</kbd> pour atteindre chacun des trois boutons de l'exemple.</li>
+		<li>Le premier bouton est actif. NVDA annonce&nbsp;: «&nbsp;Confirmer votre message -1 bouton&nbsp;».</li>
+		<li>Activer ce bouton à l'aide de la touche <kbd>Espace</kbd>. <br />NVDA annonce&nbsp;: «&nbsp;Dialogue: bouton 1 votre message est confirmé. OK bouton&nbsp;».</li>
+		<li>Confirmer à l'aide de la touche <kbd>Espace</kbd>.</li>
+		</ol>
+		<h3>Étape 2</h3>
+
+		<ol>
+			<li>Le second bouton est désactivé. <br />NVDA annonce&nbsp;: «&nbsp;confirmer votre message -2, non disponible.&nbsp;». Lorsque vous appuyez sur le bouton à l'aide de la touche <kbd>Espace</kbd>, rien ne se passe.</li>			
+		</ol>
+		<h3>Étape 3</h3>
+				<ol>
+		<li>Le troisième bouton est actif et labellisé avec un passage de texte. NVDA annonce&nbsp;: «&nbsp;confirmer votre message - 3 bouton&nbsp;».</li>
+				<li>Activer ce bouton à l'aide de la touche <kbd>Espace</kbd>. <br />NVDA annonce&nbsp;: «&nbsp;Dialogue: bouton 3 votre message est confirmé. OK bouton&nbsp;».</li>
+						<li>Confirmer à l'aide de la touche <kbd>Espace</kbd>.</li>
+		</ol>
+		</article><article class="article"><h2>Test des boutons avec <span lang="en">VoiceOver</span></h2>
+
+		<h3>Étape 1</h3>
+		<ol>
+			<li>Utiliser la touche <kbd>Tabulation</kbd> pour atteindre chacun des trois boutons de l'exemple.</li>
+		<li>Le premier bouton est actif. <span lang="en">VoiceOver</span> annonce&nbsp;: «&nbsp;Confirmer votre message 1 bouton&nbsp;».</li>
+		<li>Activer ce bouton à l'aide des touches <kbd>VO&nbsp;+&nbsp;Espace</kbd>. <br /><span lang="en">VoiceOver</span> annonce le contenu et le title du bouton OK. Il ne vocalise pas le contenu de toute la boîte de dialogue. Il annonce juste que la boîte a trois éléments. Il faut se déplacer pour prendre connaissance du contenu à l'aide des touches <kbd>VO&nbsp;+&nbsp;flèche&nbsp;droite&nbsp;et&nbsp;gauche</kbd>.</li>
+		<li>Confirmer à l'aide des touches <kbd>VO&nbsp;+&nbsp;Espace</kbd>.</li>
+		</ol>
+		<h3>Étape 2</h3>
+		<ol>
+			<li>Le second bouton est désactivé. <br /><span lang="en">VoiceOver</span> annonce&nbsp;: «&nbsp;confirmer votre message - 2, estompé, bouton. Cet élément est estompé&nbsp;». Lorsque vous appuyez sur le bouton à l'aide des touches <kbd>VO&nbsp;+&nbsp;Espace</kbd>, <span lang="en">VoiceOver</span> émet un son et dit «&nbsp;estompé&nbsp;».</li>
+		</ol>
+		<h3>Étape 3</h3>
+				<ol>
+		<li>Le troisième bouton est actif et labellisé avec un passage de texte. <span lang="en">VoiceOver</span> annonce&nbsp;: «&nbsp;confirmer votre message - 3 bouton&nbsp;».</li>
+				<li>Activer ce bouton à l'aide des touches <kbd>VO&nbsp;+&nbsp;Espace</kbd>. <br /><span lang="en">VoiceOver</span> annonce&nbsp;: «&nbsp;Dialogue&nbsp;: bouton 3 votre message est confirmé. OK bouton&nbsp;». Comme pour le premier bouton, il faut se déplacer avec les touches <kbd>VO&nbsp;+&nbsp;flèches</kbd> afin de lire le contenu de toute la boîte de dialogue.</li>
+						<li>Confirmer à l'aide des touches <kbd>VO&nbsp;+&nbsp;Espace</kbd>.</li>
+		</ol></article>
+
+				</main>
+
+				<footer id="footer" role="contentinfo" class="clear">
+					<h2>Licence d'utilisation</h2>
+					<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l'action publique"></a></p>
+					<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l'action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+				</footer>
+
+			</div>
+
+			<script src="js/script.js"></script>
+
+		</body>
+		</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>Slider - Guide sur les lecteurs d'écran</title>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+	<div class="main-header">
+
+		<div class="inside">
+			<ul class="skip-links">
+				<li><a href="#main">contenu</a></li>
+				<li><a href="#navigation">navigation</a></li>
+			</ul>
+
+			<header role="banner" class="header  clear" id="banner">
+				<h1 class="title">Guide sur les lecteurs d'écran</h1>
+			</header>
+
+			<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+				<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+				<ul class="sommaire is-hidden" id="sommaireToggle">
+					<li><a href="index.html">1. Introduction</a></li>
+					 <li>
+					 	<ul>
+							<li><a href="lecteur-ecran.html">Qu'est-ce qu'un lecteur d'écran&nbsp;?</a></li>
+					  <li><a href="environnement.html">À chaque environnement, ses lecteurs d’écran</a></li>
+				  	<li><a href="restitution.html">Comment un lecteur d'écran restitue l'information</a></li>
+						</ul>
+					 </li>
+						<li><a href="installation-config.html">2. Installation et configuration des lecteurs d’écran</a></li>
+						<li>
+							<ul>
+							<li><a href="jaws.html">Installation et configuration de <span lang="en">JAWS</span></a></li>
+					  <li><a href="nvda.html">Installation et configuration de NVDA</a></li>
+					  <li><a href="voiceover.html">Installation et configuration de <span lang="en">VoiceOver</span></a></li>
+						</ul>
+						</li>	
+					<li><a href="composants.html">3. Tester des composants ARIA avec un lecteur d'écran</a></li>
+					<li>
+						<ol>
+		<li><a lang="en" href="1-slider.html">Slider</a></li>
+		<li><a lang="en" href="2-progressbar.html">Progressbar</a></li>
+		<li><a lang="en" href="3-dialog.html">Dialog / Alert Dialog</a></li>
+		<li><a lang="en" href="4-tabpanel.html">Tabpanel</a></li>
+		<li><a lang="en" href="5-tooltip.html">Tooltip</a></li>
+		<li><a lang="en" href="6-button.html">Button</a></li>
+		<li><a lang="en" href="7-checkbox.html">Checkbox</a></li>
+		<li><a lang="en" href="8-menubar.html">Menubar</a></li>
+		<li><a lang="en" href="9-accordion.html">Accordion</a></li>
+		<li><a lang="en" href="10-tree.html">Tree</a></li>
+		<li><a lang="en" href="11-datepicker.html">DatePicker</a></li>
+		<li><a lang="en" href="12-autocomplete.html">Autocomplete</a></li>
+						</ol>
+					</li>
+<li><a href="ressources.html">4. Ressources</a></li>
+				</ul>
+			</nav>
+
+							<div class="github-link">
+				<p>
+					<a title="Contribuer / Télécharger sur Github" href="https://github.com/DISIC/guide-lecteurs_ecran">Contribuer / Télécharger</a>
+
+				</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="wrapper">
+
+			<nav role="navigation" class="internav clear">
+				<ul>
+					<li><a class="prev" href="composants.html"><span aria-hidden="true"> &laquo; </span> Tester des composants ARIA avec un lecteur d'écran</a></li>
+					<li><a class="next" href="3-dialog.html" lang="en">Dialog / Alert Dialog <span aria-hidden="true"> &raquo; </span></a></li>
+				</ul>
+			</nav>
+
+			<main id="main" role="main">
+				<h1 class="fiche-title" lang="en">Slider</h1>
+				<article class="article">
+					<h2>Description</h2>
+					<div class="centre">
+						<img src="img/slider.jpg" alt="" />
+					</div>
+					<p>Le <span lang="en">slider</span> est un composant qui permet de faire varier une valeur en déplaçant un curseur. Il peut être vertical ou horizontal.</p>
+					<p>Il est possible également de proposer des <span lang="en">sliders</span> à intervalle pour déterminer une valeur entre un minimum et un maximum à l'aide de deux curseurs.</p>
+					<h3>Restitution</h3>
+					<ul>
+						<li>Le composant doit posséder un <a href="https://www.w3.org/TR/accname-aam-1.1/#dfn-accessible-name"><strong>nom accessible</strong> (ressource en anglais)</a>.</li>
+						<li>Une valeur est vocalisée à chaque action sur le curseur.</li>
+					</ul>
+					<h3>Interactions de base au clavier</h3>
+					<p>Les interactions au clavier sont&nbsp;:</p>
+					<ul>
+						<li>Les flèches <kbd>haut</kbd> ou <kbd>droite</kbd> permettent d'augmenter la valeur.</li>
+						<li>Les flèches <kbd>bas</kbd> ou <kbd>gauche</kbd> permettent de diminuer la valeur.</li>
+					</ul>
+					<p><strong>Motif de conception</strong>&nbsp;: <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#slider" lang="en">Slider</a> (<span lang="en">WAI-ARIA Authoring Practices 1.1</span>)</p>
+					<h3><a href="http://disic.github.io/rgaa_composants_javascript/#slider">Exemple d'un <span lang="en">slider</span></a></h3>
+				</article>
+
+				<article class="article">
+					<h2>Test du <span lang="en">slider</span> avec JAWS</h2>
+					<h3>Étape 1</h3>
+					<ol>
+						<li>Utiliser la touche <kbd>Tabulation</kbd> pour positionner le curseur sur le potentiomètre. <br />JAWS annonce&nbsp;: «&nbsp;potentiomètre horizontal, choisir le tarif maximum recherché, 0€&nbsp;».</li>
+
+					</ol>
+					<p><strong>Note</strong>&nbsp;: si votre réglage par défaut n'est pas sur l'activation automatique du mode formulaire, appuyer sur <kbd>Entrée</kbd> pour rentrer dans ce mode.</p>
+					
+					<h3>Étape 2</h3>
+					<ol>
+						<li>Augmenter la valeur avec les flèches <kbd>haut</kbd> ou <kbd>droite</kbd>.</li>
+						<li>Diminuer la valeur avec les flèches <kbd>bas</kbd> ou <kbd>gauche</kbd>.</li>
+						<li>JAWS annonce la valeur mise à jour.</li>
+					</ol>
+					<p><strong>Note</strong>&nbsp;: il se peut lorsqu'on utilise les flèches <kbd>haut</kbd> et <kbd>bas</kbd> que la nouvelle valeur ne soit pas annoncée.</p>
+				</article>
+				<article class="article">
+					<h2>Test du <span lang="en">slider</span> avec NVDA</h2>
+					<h3>Étape 1</h3>
+					<ol>
+						<li>
+							Utiliser la touche <kbd>Tabulation</kbd> pour positionner le curseur sur le potentiomètre. <br />NVDA annonce «&nbsp;choisir le tarif maximum recherché potentiomètre&nbsp;»
+						</li>
+					</ol>
+					<h3>Étape 2</h3>
+					<p><strong>Note</strong>&nbsp;: même si votre réglage par défaut est l'activation automatique du mode formulaire, il semble que ce mode ne s'active pas lorsque le curseur arrive sur le <span lang="en">slider</span>. Appuyer sur <kbd>NVDA&nbsp;+&nbsp;Entrée</kbd> pour activer ce mode. Il se peut que NVDA reste silencieux lorsque vous entrez dans ce mode.</p>
+					<ol>
+						<li>Utiliser la combinaison de touches <kbd>Majuscule&nbsp;+&nbsp;Tabulation</kbd> pour revenir en arrière, puis <kbd>Tabulation</kbd> pour repositionner le focus sur le potentiomètre. <br />NVDA annonce&nbsp;: «&nbsp;choisir le tarif maximum recherché 10€&nbsp;».</li>
+					</ol>
+					
+					<h3>Étape 3</h3>
+					<ol>
+						<li>Augmenter la valeur avec les flèches <kbd>haut</kbd> ou <kbd>droite</kbd>.</li>
+						<li>Diminuer la valeur avec les flèches <kbd>bas</kbd> ou <kbd>gauche</kbd>.</li>
+					</ol>
+					<p>NVDA annonce «&nbsp;x euros&nbsp;», où x est la valeur sélectionnée.</p>
+				</article>
+
+				<article class="article">
+					<h2>Test du <span lang="en">slider</span> avec <span lang="en">VoiceOver</span></h2>
+					<h3>Étape 1</h3>
+					<p>Utiliser la touche <kbd>Tabulation</kbd> pour positionner le curseur sur le potentiomètre.</p>
+					<p><span lang="en">VoiceOver</span> annonce «&nbsp;[x euros] choisir le tarif maximum recherché, circulaire curseur. Vous êtes actuellement sur circulaire curseur. Pour commencer l'interaction avec ce curseur de défilement, appuyez sur Ctrl-Option-Majuscule-Flèche vers le bas&nbsp;».</p>
+					<h3>Étape 2</h3>
+					<p>Utiliser les touches <kbd>VO&nbsp;+&nbsp;Majuscule&nbsp;+&nbsp;flèche bas</kbd> pour interagir avec le potentiomètre.</p>
+					<p><span lang="en">VoiceOver</span> annonce «&nbsp;Entrée circulaire curseur&nbsp;».</p>
+					<h3>Étape 3</h3>
+					<p><strong>Note</strong>&nbsp;: veiller à ce que la navigation rapide soit désactivée en appuyant simultanément sur les flèches droite et gauche.</p>
+					<ul>
+						<li>Augmenter la valeur avec les flèches <kbd>haut</kbd> ou <kbd>droite</kbd>.</li>
+						<li>Diminuer la valeur avec les flèches <kbd>bas</kbd> ou <kbd>gauche</kbd>.</li>
+					</ul>
+					<p><span lang="en">VoiceOver</span> annonce deux fois la valeur sélectionnée.</p>
+				</article>
+
+			</main>
+
+			<footer id="footer" role="contentinfo" class="clear">
+				<h2>Licence d'utilisation</h2>
+				<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l'action publique"></a></p>
+				<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l'action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+			</footer>
+
+		</div>
+
+		<script src="js/script.js"></script>
+
+	</body>
+	</html>

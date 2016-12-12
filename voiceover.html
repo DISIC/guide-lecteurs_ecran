@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>Installation et configuration de VoiceOver - Guide sur les lecteurs d'écran</title>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+	<div class="main-header">
+
+		<div class="inside">
+			<ul class="skip-links">
+				<li><a href="#main">contenu</a></li>
+				<li><a href="#navigation">navigation</a></li>
+			</ul>
+
+			<header role="banner" class="header  clear" id="banner">
+				<h1 class="title">Guide sur les lecteurs d'écran</h1>
+			</header>
+
+			<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+				<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+				<ul class="sommaire is-hidden" id="sommaireToggle">
+					<li><a href="index.html">1. Introduction</a></li>
+					 <li>
+					 	<ul>
+							<li><a href="lecteur-ecran.html">Qu'est-ce qu'un lecteur d'écran&nbsp;?</a></li>
+					  <li><a href="environnement.html">À chaque environnement, ses lecteurs d’écran</a></li>
+				  	<li><a href="restitution.html">Comment un lecteur d'écran restitue l'information</a></li>
+						</ul>
+					 </li>
+						<li><a href="installation-config.html">2. Installation et configuration des lecteurs d’écran</a></li>
+						<li>
+							<ul>
+							<li><a href="jaws.html">Installation et configuration de <span lang="en">JAWS</span></a></li>
+					  <li><a href="nvda.html">Installation et configuration de NVDA</a></li>
+					  <li><a href="voiceover.html">Installation et configuration de <span lang="en">VoiceOver</span></a></li>
+						</ul>
+						</li>	
+					<li><a href="composants.html">3. Tester des composants ARIA avec un lecteur d'écran</a></li>
+					<li>
+						<ol>
+		<li><a lang="en" href="1-slider.html">Slider</a></li>
+		<li><a lang="en" href="2-progressbar.html">Progressbar</a></li>
+		<li><a lang="en" href="3-dialog.html">Dialog / Alert Dialog</a></li>
+		<li><a lang="en" href="4-tabpanel.html">Tabpanel</a></li>
+		<li><a lang="en" href="5-tooltip.html">Tooltip</a></li>
+		<li><a lang="en" href="6-button.html">Button</a></li>
+		<li><a lang="en" href="7-checkbox.html">Checkbox</a></li>
+		<li><a lang="en" href="8-menubar.html">Menubar</a></li>
+		<li><a lang="en" href="9-accordion.html">Accordion</a></li>
+		<li><a lang="en" href="10-tree.html">Tree</a></li>
+		<li><a lang="en" href="11-datepicker.html">DatePicker</a></li>
+		<li><a lang="en" href="12-autocomplete.html">Autocomplete</a></li>
+						</ol>
+					</li>
+<li><a href="ressources.html">4. Ressources</a></li>
+				</ul>
+			</nav>
+
+							<div class="github-link">
+				<p>
+					<a title="Contribuer / Télécharger sur Github" href="https://github.com/DISIC/guide-lecteurs_ecran">Contribuer / Télécharger</a>
+
+				</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="wrapper">
+
+			<nav role="navigation" class="internav clear">
+				<ul>
+					<li><a class="prev" href="nvda.html"><span aria-hidden="true"> &laquo; </span> Installation et configuration de NVDA</a></li>
+					<li><a class="next" href="composants.html">3. Tester des composants ARIA avec un lecteur d'écran <span aria-hidden="true"> &raquo; </span></a></li>
+				</ul>
+			</nav>
+
+			<main id="main" role="main">
+				<h1 class="fiche-title">Installation et configuration de <span lang="en">VoiceOver</span></h1>
+				
+				<article class="article">
+					<h2>Installation</h2>
+					<p><span lang="en">VoiceOver</span> est installé par défaut sur tous les Mac. Pour le lancer (ou le désactiver), appuyer sur <kbd>cmd ⌘&nbsp;+&nbsp;F5</kbd>.</p>
+				</article>
+
+				<article class="article">
+					<h2>Configuration de <span lang="en">VoiceOver</span> pour l'évaluation</h2>
+					<P>Par défaut, le focus utilisé par <span lang="en">VoiceOver</span> n'est pas très visible. Afin d'améliorer cette visibilité, il est nécessaire de modifier 2 Options, l'une dans Safari et l'autre dans les raccourcis clavier des Préférences Système.</p>
+						<p><strong>Dans Safari</strong>, il n'est pas possible, par défaut, de naviguer à la tabulation et de voir le focus du navigateur lorsque <span lang="en">VoiceOver</span> est activé. Pour remédier à cela, procéder comme suit&nbsp;:</p>
+						<ol>
+							<li>Aller dans «&nbsp;Préférences…&nbsp;» (<kbd>⌘&nbsp;+&nbsp;,</kbd>), «&nbsp;Avancées&nbsp;».</li>
+							<li>Dans «&nbsp;Accessibilité&nbsp;», cocher la case «&nbsp;La touche Tab permet de mettre en surbrillance les objets des pages web&nbsp;».</li>
+						</ol>
+						
+						<div class="centre">
+						<img src="img/VoiceOver/safari.png" alt="">
+						</div>
+
+						<p>Modifications dans les <strong>Préférences Système</strong>&nbsp;:</p>
+						<ol>
+							<li>Aller dans «&nbsp;Clavier&nbsp;».</li>
+							<li>Dans l'onglet «&nbsp;Raccourcis&nbsp;», «&nbsp;Accès au clavier complet&nbsp;: dans les fenêtres et zones de dialogue, la touche Tabulation activera&nbsp;:&nbsp;», choisir le bouton radio «&nbsp;tous les contrôles&nbsp;» et non «&nbsp;les champs et listes seulement&nbsp;».</li>
+						</ol>
+						
+						<div class="centre">
+						<img src="img/VoiceOver/pref_syst.png" alt="">
+						</div>
+
+					</article>
+					<article class="article">
+						<h3>Synthèse vocale</h3>
+						<p>Il se peut que la synthèse vocale par défaut soit la synthèse anglaise. Si la voix française n'est pas disponible sur votre Mac, il vous faudra peut-être la télécharger.</p>
+
+						<p>Aller dans l'utilitaire <span lang="en">VoiceOver</span>&nbsp;:
+							<ul>
+								<li><span lang="en">VoiceOver</span> désactivé&nbsp;: Préférences Système > Accessibilité > <span lang="en">VoiceOver</span> > Ouvrir l'utilitaire <span lang="en">VoiceOver</span>.</li>
+								<li><span lang="en">VoiceOver</span> activé&nbsp;: appuyez sur les touches <kbd>VO&nbsp;+&nbsp;F8</kbd>. Il peut être nécessaire d'appuyer sur la touche <kbd>fn</kbd> si vous avez un clavier portable et que vous voulez utiliser F8.</li>
+							</ul>
+
+							<p>L'utilitaire comprend plusieurs catégories, dont une sur les paramètres vocaux que vous pouvez modifier.</p>
+
+							<h4>Parole</h4>
+							<p>Dans la catégorie «&nbsp;Parole&nbsp;», choisir l'onglet «&nbsp;Voix&nbsp;».</p>
+
+							<div class="centre">
+							<img src="img/VoiceOver/parole.png" alt="">
+							</div>
+
+							<p>Vous pouvez choisir une voix dans une liste déroulante. Si seule la voix anglaise est proposée, vous pouvez télécharger d'autres voix.</p>
+
+							<p>La synthèse par défaut est de bonne qualité. Pour plus de confort, vous pouvez télécharger des voix améliorées.</p>
+
+							<p>Dans ce même onglet, vous pouvez déterminer le débit, la hauteur, l'intonation de la synthèse.</p>
+
+							<h4>Verbosité</h4>
+
+							<p>Dans la catégorie «&nbsp;Verbosité&nbsp;», l'onglet «&nbsp;Texte&nbsp;», vous permet de choisir ce que doit prononcer <span lang="en">VoiceOver</span>.</p>
+							
+							<div class="centre">
+							<img src="img/VoiceOver/texte.png" alt="">
+							</div>
+
+							<p>Par exemple, que lors de la saisie, seuls les mots soient prononcés.</p>
+
+							<h4>Modifier les paramètres vocaux à la volée</h4>
+							
+							<div class="centre">
+							<img src="img/VoiceOver/volee.png" alt="">
+							</div>
+
+							<p>Comme avec NVDA, il vous est possible de modifier les caractéristiques vocales à la volée. Lorsque vous appuyez sur <kbd>VO&nbsp;+&nbsp;cmd ⌘&nbsp;+&nbsp;les flèches gauche et droite</kbd>, vous sélectionnez le paramètre à modifier, tel que la tonalité, le volume, l'intonation, la voix et débit. Pour modifier la valeur du paramètre, comme ralentir le débit de la synthèse, il suffit d'appuyer sur <kbd>VO&nbsp;+&nbsp;cmd ⌘&nbsp;+&nbsp;flèches haut ou bas</kbd>.</p>
+
+						</article>
+						<article class="article">
+							<h3>Les paramètres Web</h3>
+							<p>Dans la catégorie «&nbsp;Web&nbsp;» de l'utilitaire, vous pouvez sélectionner ce que <span lang="en">VoiceOver</span> doit vocaliser et comment il doit se comporter sur une page web.</p>
+							
+							<div class="centre">
+							<img src="img/VoiceOver/rotor_web.png" alt="">
+							</div>
+
+							<p>Le rotor Web vous permettra de choisir de naviguer par lien, titre, image. Pour cela, cocher dans «&nbsp;Rotor web&nbsp;» les éléments à inclure&nbsp;: par défaut, les images ne sont pas cochées, par exemple.</p>
+
+							<h3>La navigation rapide</h3>
+							<p>Ce mode de navigation permet de se déplacer d'un simple appui sur une touche ou d'une combinaison de touches dans une page web.</p>
+							<p>Pour activer ce mode, allez dans l'utilitaire&nbsp;:</p>
+							<ol>
+								<li>Dans la catégorie «&nbsp;Commandeur&nbsp;», choisir l'onglet «&nbsp;Navigation rapide&nbsp;».</li>
+								<li>Cocher «&nbsp;Activer la navigation rapide&nbsp;».</li>
+								<li>Cocher la case «&nbsp;Activer la navigation web par touche unique lors de l'utilisation de Navigation rapide&nbsp;».</li>
+							</ol>
+							
+							<div class="centre">
+							<img src="img/VoiceOver/nav_rapide.png" alt="">
+							</div>
+
+							<p>Dans Safari, lorsque vous appuierez sur <kbd>H</kbd>, <span lang="en">VoiceOver</span> se déplacera au titre HN suivant. <kbd>F</kbd> déplacera le curseur au prochain champ de formulaire. <kbd>B</kbd> ira au prochain bouton.</p>
+							<p><strong>Note</strong>&nbsp;: si vous devez saisir du texte, il faudra désactiver la navigation rapide en appuyant simultanément sur les flèches droite et gauche.</p>
+
+						</article>
+					</main>
+
+					<footer id="footer" role="contentinfo" class="clear">
+						<h2>Licence d'utilisation</h2>
+						<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l'action publique"></a></p>
+						<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l'action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+					</footer>
+
+				</div>
+
+				<script src="js/script.js"></script>
+
+			</body>
+			</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>Installation et configuration de NVDA - Guide sur les lecteurs d'écran</title>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+	<div class="main-header">
+
+		<div class="inside">
+			<ul class="skip-links">
+				<li><a href="#main">contenu</a></li>
+				<li><a href="#navigation">navigation</a></li>
+			</ul>
+
+			<header role="banner" class="header  clear" id="banner">
+				<h1 class="title">Guide sur les lecteurs d'écran</h1>
+			</header>
+
+			<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+				<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+				<ul class="sommaire is-hidden" id="sommaireToggle">
+					<li><a href="index.html">1. Introduction</a></li>
+					 <li>
+					 	<ul>
+							<li><a href="lecteur-ecran.html">Qu'est-ce qu'un lecteur d'écran&nbsp;?</a></li>
+					  <li><a href="environnement.html">À chaque environnement, ses lecteurs d’écran</a></li>
+				  	<li><a href="restitution.html">Comment un lecteur d'écran restitue l'information</a></li>
+						</ul>
+					 </li>
+						<li><a href="installation-config.html">2. Installation et configuration des lecteurs d’écran</a></li>
+						<li>
+							<ul>
+							<li><a href="jaws.html">Installation et configuration de <span lang="en">JAWS</span></a></li>
+					  <li><a href="nvda.html">Installation et configuration de NVDA</a></li>
+					  <li><a href="voiceover.html">Installation et configuration de <span lang="en">VoiceOver</span></a></li>
+						</ul>
+						</li>	
+					<li><a href="composants.html">3. Tester des composants ARIA avec un lecteur d'écran</a></li>
+					<li>
+						<ol>
+		<li><a lang="en" href="1-slider.html">Slider</a></li>
+		<li><a lang="en" href="2-progressbar.html">Progressbar</a></li>
+		<li><a lang="en" href="3-dialog.html">Dialog / Alert Dialog</a></li>
+		<li><a lang="en" href="4-tabpanel.html">Tabpanel</a></li>
+		<li><a lang="en" href="5-tooltip.html">Tooltip</a></li>
+		<li><a lang="en" href="6-button.html">Button</a></li>
+		<li><a lang="en" href="7-checkbox.html">Checkbox</a></li>
+		<li><a lang="en" href="8-menubar.html">Menubar</a></li>
+		<li><a lang="en" href="9-accordion.html">Accordion</a></li>
+		<li><a lang="en" href="10-tree.html">Tree</a></li>
+		<li><a lang="en" href="11-datepicker.html">DatePicker</a></li>
+		<li><a lang="en" href="12-autocomplete.html">Autocomplete</a></li>
+						</ol>
+					</li>
+<li><a href="ressources.html">4. Ressources</a></li>
+				</ul>
+			</nav>
+
+							<div class="github-link">
+				<p>
+					<a title="Contribuer / Télécharger sur Github" href="https://github.com/DISIC/guide-lecteurs_ecran">Contribuer / Télécharger</a>
+
+				</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="wrapper">
+
+			<nav role="navigation" class="internav clear">
+				<ul>
+					<li><a class="prev" href="jaws.html"><span aria-hidden="true"> &laquo; </span> Installation et configuration de <span lang="en">JAWS</span></a></li>
+					<li><a class="next" href="voiceover.html">Installation et configuration de <span lang="en">VoiceOver</span> <span aria-hidden="true"> &raquo; </span></a></li>
+				</ul>
+			</nav>
+
+			<main id="main" role="main">
+				<h1 class="fiche-title">Installation et configuration de NVDA</h1>
+				<article class="article">
+					<h2 id="paramnvda">Installation de NVDA</h2>
+					<p><strong>Note</strong>&nbsp;: le <a href="http://www.nvda-fr.org/index.php">site francophone de NVDA</a> propose toujours la dernière version stable en téléchargement. Il s'agit actuellement de la version 2016.3. La 2016.4 devrait être publiée avant la fin de l'année 2016 et elle sera proposée au téléchargement sur le site francophone dès qu'elle sera disponible. Le fichier se télécharge assez rapidement.</p>
+		<ol>
+		<li>Télécharger la <a href="http://www.nvda-fr.org/download.php">dernière version de NVDA</a>.</li>
+		<li>Une fois que le fichier est téléchargé, l'exécuter et accepter la licence. <br />
+		Contrairement à JAWS, NVDA est un logiciel <span lang="en">open source</span> et peut être utilisé gratuitement. Il est financé à l'aide de dons.</li>
+		<li>Vous avez ensuite le choix d'installer NVDA sur votre ordinateur ou d'en faire une version portable. <br />Dans le cas où vous l'installez sur l'ordinateur, il suffit de suivre les instructions. Si vous souhaitez obtenir une version portable de NVDA, il vous suffit de créer un dossier et d'indiquer, lors de l'installation, où les fichiers de la version portable doivent être copiés. L'intérêt de la version portable est que vous pouvez la copier n'importe où, notamment sur un support USB, et l'exécuter sur n'importe quel ordinateur.</li>
+		<li>L'installation est très rapide. Lorsqu'elle est terminée, vous n'avez pas besoin de redémarrer l'ordinateur, NVDA peut être lancé dès la fin de l'installation.</li>
+		</ol>
+		</article>
+
+		<article class="article">
+		<h2>Configuration de NVDA pour l'évaluation</h2>
+		<h3>Dialogue de démarrage</h3>
+		<p>Lorsque vous démarrez NVDA pour la première fois, une boîte de dialogue aparaît. Elle vous propose de&nbsp;:</p>
+		<div class="centre">
+		<img src="img/nvda/demarrage.PNG" alt="">
+		</div>
+		<ol>
+			<li>Choisir la touche NVDA (voir <a href="installation-config.html#avantinstall">Installation et configuration des lecteurs d’écran - Avant de commencer</a>). <br />Vous pouvez ainsi cocher «&nbsp;Utiliser verrouillage majuscule comme touche NVDA&nbsp;», si vous souhaitez que la touche <kbd>Verrouillage majuscule</kbd> serve de touche NVDA en plus des touches <kbd>Insert</kbd>.</li>
+			<li>Choisir si NVDA doit démarrer ou non au lancement de Windows.</li>
+			<li>Décider d'afficher ce dialogue de bienvenue à chaque lancement de NVDA.</li>
+		</ol>
+		<p><strong>Note</strong>&nbsp;: Si vous changez d'avis, vous pouvez retrouver ce dialogue de bienvenue dans «&nbsp;Aide&nbsp; > Dialogue de bienvenue&nbsp;».</p>
+		<h3>Synthèse vocale</h3>
+		<p><span lang="en">eSpeak</span>, la synthèse vocale proposée par défaut dans NVDA, est pour beaucoup inaudible et désagréable à écouter. Il existe d'autres synthétiseurs vocaux téléchargeables sur la <a href="http://www.nvda-fr.org/addons/">page des modules complémentaires</a>, sur le site francophone de NVDA. </p>
+		<p>Une fois que vous aurez installé le module qui vous convient, vous pourrez changer de synthèse vocale en appuyant simultanément sur <kbd>NVDA&nbsp;+&nbsp;Contrôle&nbsp;+&nbsp;S</kbd>. Choisir la synthèse qui vous convient à l'aide des flèches <kbd>haut</kbd> et <kbd>bas</kbd> et valider par <kbd>Entrée</kbd>.</p>
+
+		<div class="centre"><img src="img/nvda/synthetiseur.PNG" alt=""></div>
+		<p>Pour changer la vitesse de lecture, la langue de la voix et la quantité d'informations à prononcer, aller dans le menu NVDA en appuyant simultanément sur <kbd>NVDA&nbsp;+&nbsp;n</kbd>, aller dans «&nbsp;Préférences&nbsp;», puis «&nbsp;Paramètres vocaux&nbsp;». Effectuer les réglages et confirmer avec «&nbsp;OK&nbsp;».</p>
+		<p>Il est possible de dire à NVDA de prononcer ou non chaque caractère tapé en appuyant sur <kbd>NVDA&nbsp;+&nbsp;2</kbd> du clavier alphanumérique, de prononcer ou non chaque mot tapé en appuyant sur <kbd>NVDA&nbsp;+&nbsp;3</kbd> du clavier alphanumérique.</p>
+		<h4>Modifier les paramètres vocaux  à la volée</h4>
+		<p>Vous pouvez modifier les paramètres vocaux, tels que la vitesse, la hauteur, la langue, etc. comme suit&nbsp;: </p>
+		<ul>
+		<li><kbd>NVDA&nbsp;+&nbsp;Contrôle&nbsp;+&nbsp;flèches droite et gauche</kbd> permet de passer d'un paramètre à l'autre.</li>
+		<li><kbd>NVDA&nbsp;+&nbsp;Contrôle&nbsp;+&nbsp;flèches haut et bas</kbd>, permet de modifier le paramètre (plus vite, moins vite par exemple)</li></ul>
+		<p><strong>Note</strong>&nbsp;: ce raccourci concerne l'utilisation de NVDA en version clavier de bureau. Pour la version clavier portable, rajouter la touche majuscule aux combinaisons évoquées précédemment.</p>
+		</article>
+		<article class="article">
+		<h3>Régler les préférences de NVDA pour l'évaluation</h3>
+		<div class="centre"><img src="img/nvda/param-vocaux.PNG" alt=""></div>
+		<p>Dans <strong>Paramètres vocaux</strong>, cocher les cases «&nbsp;Changement automatique de langue&nbsp;» et «&nbsp;Changement automatique de dialecte&nbsp;».</p>
+		<div class="centre"><img src="img/nvda/objets.PNG" alt=""></div>
+		<p>Dans <strong>Présentation des objets</strong>, cocher «&nbsp;Annoncer les suggestions&nbsp;», «&nbsp;Annoncer les bulles d'aide&nbsp;», «&nbsp;Annoncer la description de l'objet&nbsp;», «&nbsp;Annoncer les changements dynamiques de contenu&nbsp;».</p>
+		<p>Pour entendre l'évolution d'une barre de progression, vous pouvez choisir dans la liste déroulante si elle doit être vocale, par des bips, les deux ou être désactivée. Une fois tous les réglages effectués, confirmer avec «&nbsp;OK&nbsp;».</p>
+		<h3>Mode formulaire ou application</h3>
+	<p>Il est possible de choisir comment activer le mode formulaire ou application dans «&nbsp;Préférences > Mode navigation&nbsp;».</p>
+<div class="centre"><img src="img/nvda/navigation.PNG" alt=""></div>
+	<p>Lorsque «&nbsp;Mode formulaire automatique lors des changements de focus&nbsp;» est activé, NVDA passe en mode formulaire dès que l'on atteint un champ de formulaire ou une application avec la touche tabulation.<p>Lorsque «&nbsp;mode formulaire automatique lors du déplacement du curseur&nbsp;» est cochée, NVDA passe en mode formulaire lorsqu'on se déplace avec les flèches sur un champ de formulaire. </p>
+	<p>Il est enfin possible de demander à NVDA d'indiquer ou non par un signal sonore si le mode formulaire ou navigation est activé.</p>
+	<p>Confirmer vos réglages avec «&nbsp;OK&nbsp;».</p>
+	<h3>Visionneuse de parole</h3>
+	<p>Cet outil vous permet d'afficher à l'écran ce que prononce NVDA, si vous ne voulez pas forcément écouter ce que dit la synthèse vocale.</p>
+	<p>Pour activer la visionneuse de parole, aller dans le menu NVDA en appuyant sur <kbd>NVDA&nbsp;+&nbsp;n</kbd>, choisir «&nbsp;Outils&nbsp;», puis «&nbsp;Visionneuse de parole&nbsp;».</p>
+	<div class="centre"><img src="img/nvda/visionneuse.png" alt="" /></div>
+	<p>La visionneuse de parole affiche l'ensemble des informations vocalisées, ce qui peut être très utile pour étudier plus finement le problèmes de restitution.</p>
+	</article>
+	<article class="article">
+	<h3>Modules complémentaires</h3>
+	<p>La communauté a développé un grand nombre de modules pour faciliter l'utilisation de NVDA et des applications.</p>
+	<h4>Voir le focus</h4>
+	<p>Le module <a lang="en" href="http://addons.nvda-project.org/addons/focusHighlight.en.html">Focus Highlight</a> ajoute un rectangle coloré montrant où se trouve le curseur NVDA.</p>
+	<div class="centre"><img src="img/nvda/focus.PNG" alt="" /></div>
+	<p>Pour installer ce module, le télécharger, puis cliquer sur le fichier.</p>
+	<p>La boîte de dialogue pour l'ajout de modules s'ouvrira. Il suffit de sélectionner «&nbsp;Ajouter&nbsp;». Il vous sera alors demandé de redémarrer NVDA pour terminer l'installation.</p>
+	<h4>Étendre les commandes de base de NVDA</h4>
+	<p>Le module complémentaire «&nbsp;Extension des commandes de base de NVDA&nbsp;» (NVDAExtensionGlobalPlugin) permet, entre autres, de rajouter des éléments dans la boîte de dialogue pour afficher une liste de liens, de titres, de régions. On active cette boîte de dialogue à l'aide de <kbd>NVDA&nbsp;+&nbsp;F7</kbd>. On peut alors choisir d'afficher la liste des liens, des titres, des contrôles de formulaire, des boutons radio, etc. et d'en tester l'accessibilité.</p>
+	<p>Ce module se trouve sur la <a href="http://www.nvda-fr.org/addons/">page francophone des modules complémentaires de NVDA</a>.</p>
+				</article>
+				</main>
+
+				<footer id="footer" role="contentinfo" class="clear">
+					<h2>Licence d'utilisation</h2>
+					<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l'action publique"></a></p>
+					<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l'action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+				</footer>
+
+			</div>
+
+			<script src="js/script.js"></script>
+
+		</body>
+		</html>

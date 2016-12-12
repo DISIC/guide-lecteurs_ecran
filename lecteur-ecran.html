@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>Qu'est-ce qu'un lecteur d'écran&nbsp;? - Guide sur les lecteurs d'écran</title>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/print.css" media="print">
+  </head>
+
+  <body>
+  	<div class="main-header">
+
+  		<div class="inside">
+  			<ul class="skip-links">
+  				<li><a href="#main">contenu</a></li>
+  				<li><a href="#navigation">navigation</a></li>
+  			</ul>
+
+  			<header role="banner" class="header  clear" id="banner">
+  				<h1 class="title">Guide sur les lecteurs d'écran</h1>
+  			</header>
+
+			<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+				<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+				<ul class="sommaire is-hidden" id="sommaireToggle">
+					<li><a href="index.html">1. Introduction</a></li>
+					 <li>
+					 	<ul>
+							<li><a href="lecteur-ecran.html">Qu'est-ce qu'un lecteur d'écran&nbsp;?</a></li>
+					  <li><a href="environnement.html">À chaque environnement, ses lecteurs d’écran</a></li>
+				  	<li><a href="restitution.html">Comment un lecteur d'écran restitue l'information</a></li>
+						</ul>
+					 </li>
+						<li><a href="installation-config.html">2. Installation et configuration des lecteurs d’écran</a></li>
+						<li>
+							<ul>
+							<li><a href="jaws.html">Installation et configuration de <span lang="en">JAWS</span></a></li>
+					  <li><a href="nvda.html">Installation et configuration de NVDA</a></li>
+					  <li><a href="voiceover.html">Installation et configuration de <span lang="en">VoiceOver</span></a></li>
+						</ul>
+						</li>	
+					<li><a href="composants.html">3. Tester des composants ARIA avec un lecteur d'écran</a></li>
+					<li>
+						<ol>
+		<li><a lang="en" href="1-slider.html">Slider</a></li>
+		<li><a lang="en" href="2-progressbar.html">Progressbar</a></li>
+		<li><a lang="en" href="3-dialog.html">Dialog / Alert Dialog</a></li>
+		<li><a lang="en" href="4-tabpanel.html">Tabpanel</a></li>
+		<li><a lang="en" href="5-tooltip.html">Tooltip</a></li>
+		<li><a lang="en" href="6-button.html">Button</a></li>
+		<li><a lang="en" href="7-checkbox.html">Checkbox</a></li>
+		<li><a lang="en" href="8-menubar.html">Menubar</a></li>
+		<li><a lang="en" href="9-accordion.html">Accordion</a></li>
+		<li><a lang="en" href="10-tree.html">Tree</a></li>
+		<li><a lang="en" href="11-datepicker.html">DatePicker</a></li>
+		<li><a lang="en" href="12-autocomplete.html">Autocomplete</a></li>
+						</ol>
+					</li>
+<li><a href="ressources.html">4. Ressources</a></li>
+				</ul>
+			</nav>
+
+  			<div class="github-link">
+  				<p><a title="Contribuer sur Github" href="https://github.com/DISIC/guide-lecteurs_ecran">Contribuer / Télécharger</a></p>
+  				</div>
+  			</div>
+  		</div>
+
+	<div id="wrapper">
+
+	<nav role="navigation" class="internav clear">
+		<ul>
+			<li><a class="prev" href="index.html"><span aria-hidden="true"> &laquo; </span> Introduction</a></li>
+			<li><a class="next" href="environnement.html">À chaque environnement, ses lecteurs d’écran <span aria-hidden="true"> &raquo; </span></a></li>
+		</ul>
+	</nav>
+
+		<main id="main" role="main">
+			<h1 class="fiche-title">Qu'est-ce qu'un lecteur d'écran ?</h1>
+			<article class="article">
+				<h2 id="definition">Définition du lecteur d'écran</h2>
+								<blockquote cite="https://fr.wikipedia.org/wiki/Lecteur_d%27%C3%A9cran"><p>Un <em>lecteur d'écran</em> (également appelé <i>revue d'écran</i>) est un logiciel d’assistance technique destiné aux personnes «&nbsp;empêchées de lire&nbsp;» (aveugles, fortement malvoyantes, dyslexiques, dyspraxiques…)&nbsp;: il retranscrit par synthèse vocale et/ou sur un afficheur braille ce qui est affiché sur l'écran d'un ordinateur tant en termes de contenu que de structure et permet d’interagir avec le système d’exploitation et les logiciels applications.</p>
+									<cite>Source&nbsp;: <a href="https://fr.wikipedia.org/wiki/Lecteur_d%27%C3%A9cran">définition d'un lecteur d'écran - Wikipédia</a></cite>
+								</blockquote>
+								<div class="centre">
+									<img src="img/plagebraille.jpg" alt="" />
+								</div>
+			</article>
+			<article class="article">
+				<h2 id="fonctionnement">Fonctionnement des lecteurs d'écran</h2>
+								<p>Un lecteur d'écran est un logiciel qui agit comme une <strong>interface entre l'utilisateur et un contenu mis à disposition par un autre logiciel</strong>. Par exemple, pour le web, le lecteur d'écran restitue le contenu qui lui est fourni par le navigateur.</p>
+								<p>Nous verrons qu'il est donc important que chaque information soit indiquée au navigateur pour que le lecteur d'écran la restitue correctement à l'utilisateur. Un lecteur d'écran ne peut pas encore réfléchir et tenter de décoder, si on ne lui donne pas «&nbsp;toutes les billes&nbsp;». Contrairement à l'être humain, il ne pourra pas interpréter un dessin, un graphique ou tout autre objet non textuel.</p>
+								<p>Un lecteur d'écran peut être&nbsp;:</p>
+								<ul>
+									<li>un composant <strong>intégré au système d'exploitation</strong>, comme <span lang="en">VoiceOver</span> sous Mac ou le Narrateur sous Windows&nbsp;;</li>
+									<li>un <strong lang="en">plug-in</strong>, comme ChromeVox, qui permet de lire certaines informations dans le navigateur&nbsp;;</li>
+									<li>un <strong>logiciel</strong> (JAWS, NVDA, Orca, etc.) à télécharger et installer sur le système d'exploitation, qui permet d'accéder à l'ensemble du système et de ses applications.</li>
+								</ul>
+								<p>Le lecteur d'écran se sert des informations envoyées par le logiciel en cours d'utilisation grâce aux <strong>API d'accessibilité du système d'exploitation</strong>. Ces informations traitées par le lecteur d'écran sont elles-mêmes renvoyées à la synthèse  vocale et/ou à l'afficheur braille.</p>
+								</article>
+
+								<article class="article">
+								<h3>Le rôle du navigateur web</h3>
+								<p>Dans le cas spécifique de la navigation sur le web, le navigateur a en charge deux rôles principaux.</p>
+								<p>Il doit <strong>mettre à disposition une version particulière du DOM</strong> appelée <i lang="en">accessible tree</i> ou DOM accessible en français. Il s'agit d'une arborescence d'objets similaire au <a href="https://fr.wikipedia.org/wiki/Document_Object_Model">DOM</a> correspondant au code généré et <strong>enrichie</strong>, pour chaque élément qui le nécessite, <strong>des informations essentielles à l'accessibilité</strong>.</p>
+
+								<p>Il doit également <strong>fournir toutes les informations disponibles sur les éléments du contenu</strong> à l'<a href="https://fr.wikipedia.org/wiki/Interface_de_programmation">API</a> d'accessibilité système (<abbr lang="en" title="Microsoft Active Accessibility">MSAA</abbr> / <abbr lang="en" title="User Interface Automation">UIA</abbr> pour Windows, <abbr lang="en" title="Assistive Technology Service Provider Interface">AT-SPI</abbr> pour Linux ou <abbr lang="en" title="OS X Accessibility Protocol">AXAPI</abbr> pour OSX) directement (comme Internet Explorer avec Windows) ou avec sa propre API (comme l'API «&nbsp;universelle&nbsp;» IA2 utilisée par Firefox), sous la forme de couples propriétés/valeurs statiques ou dynamiques.<p>
+								<p>Dans le cas d'une case à cocher d'un formulaire, par exemple, le lecteur d'écran va puiser dans ces deux sources d'information (le DOM accessible et l'API d'accessibilité) pour retranscrire vocalement l'élément en cours de consultation. NVDA avec Firefox annoncera, lorsque l'utilisateur activera l'élément à la prise de focus&nbsp;: «&nbsp;case à cocher, non cochée, oui&nbsp;» puis «&nbsp;oui, case à cocher, cochée&nbsp;» lorsque l'utilisateur aura coché la case.</p>
+								<div class="centre">
+									<img src="img/dialogueAPI.png" alt="" />
+								</div>
+
+								<h3>Lecteur d'écran et navigateur web</h3>
+								<p>Comme expliqué en introduction, <strong>un lecteur d'écran n'est pas un navigateur et ne peut pas travailler tout seul</strong>. Il s'agit d'une interface logicielle entre l'utilisateur et le contenu via le système d'exploitation et le logiciel utilisé, en l'occurrence le navigateur. Cela explique pourquoi, lorsqu'on découvre un lecteur d'écran, il est si déroutant de constater que ce qui fonctionne très bien avec un navigateur se révèle catastrophique avec un autre. Ce n'est pas anormal, chaque lecteur d'écran est en effet, peu ou prou, optimisé pour un navigateur particulier (par exemple NVDA est optimisé pour Firefox, JAWS pour Internet Explorer et VoiceOver pour Safari).</p>
+								</article>
+								<article class="article">
+								<h3>Utilisation d'un lecteur d'écran</h3>
+								<p>Le lecteur d'écran se pilote presque exclusivement <strong>au clavier</strong>.</p> 
+								<p>L'utilisateur se sert dans un premier temps des raccourcis du système d'exploitation pour se déplacer de fenêtre en fenêtre, fermer une application, aller sur le bureau. Il peut aussi utiliser les raccourcis clavier propres au lecteur d'écran, qui lui permettent d'obtenir des informations sur le nom de l'application dans laquelle il se trouve, le nombre de liens sur la page, l'heure qu'il est, etc.</p>
+								<p>Chaque lecteur d'écran a ses raccourcis clavier spécifiques et l'utilisateur doit faire un effort important pour les mémoriser.</p>
+								<p>Le lecteur d'écran va intercepter toutes les touches du clavier et, selon leur nature, le mode de consultation, le type de contenu et le composant, filtrer l'action à réaliser. Il y a donc un <strong>dialogue permanent entre le lecteur d'écran et le navigateur</strong>, chacun d'entre eux étant chargé d'informer son partenaire, en temps réel, de l'état et des moindres changements dans le contenu, comme des commandes et actions effectuées par l'utilisateur.</p>
+								<h4>Navigation à la souris</h4>
+								<p>Même si l'utilisateur principal du lecteur d'écran est la personne aveugle, qui se sert exclusivement du clavier, l'option de lecture vocale peut aussi être utilisée par les personnes malvoyantes qui voient assez l'écran pour naviguer avec une souris, mais dont la vue se fatigue. Les personnes dyslexiques ou dyspraxiques pourront également se servir d'une souris pour «&nbsp;vocaliser&nbsp;», grâce à la synthèse vocale du lecteur d'écran, les informations qu'elles ont du mal à déchiffrer.</p>
+								<p>En plus des raccourcis clavier proposés par les lecteurs d'écran, certains de ces logiciels disposent d'un système de sonorisation de la souris afin de permettre à l'utilisateur de savoir où et sur quoi se trouve le pointeur.</p>
+			</article>
+								</main>
+
+<footer id="footer" role="contentinfo" class="clear">
+		<h2>Licence d'utilisation</h2>
+		<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l'action publique"></a></p>
+		<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l'action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+	</footer>
+
+							</div>
+
+							<script src="js/script.js"></script>
+
+						</body>
+						</html>

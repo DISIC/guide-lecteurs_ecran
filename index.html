@@ -1,0 +1,140 @@
+﻿<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>Guide sur les lecteurs d'écran</title>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/print.css" media="print">
+  </head>
+
+  <body>
+  	<div class="main-header">
+
+  		<div class="inside">
+  			<ul class="skip-links">
+  				<li><a href="#main">contenu</a></li>
+  				<li><a href="#navigation">navigation</a></li>
+  			</ul>
+
+  			<header role="banner" class="header  clear" id="banner">
+  				<h1 class="title">Guide sur les lecteurs d'écran</h1>
+  			</header>
+
+			<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+				<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+				<ul class="sommaire is-hidden" id="sommaireToggle">
+					<li><a href="index.html">1. Introduction</a></li>
+					 <li>
+					 	<ul>
+							<li><a href="lecteur-ecran.html">Qu'est-ce qu'un lecteur d'écran&nbsp;?</a></li>
+					  <li><a href="environnement.html">À chaque environnement, ses lecteurs d’écran</a></li>
+				  	<li><a href="restitution.html">Comment un lecteur d'écran restitue l'information</a></li>
+						</ul>
+					 </li>
+						<li><a href="installation-config.html">2. Installation et configuration des lecteurs d’écran</a></li>
+						<li>
+							<ul>
+							<li><a href="jaws.html">Installation et configuration de <span lang="en">JAWS</span></a></li>
+					  <li><a href="nvda.html">Installation et configuration de NVDA</a></li>
+					  <li><a href="voiceover.html">Installation et configuration de <span lang="en">VoiceOver</span></a></li>
+						</ul>
+						</li>	
+					<li><a href="composants.html">3. Tester des composants ARIA avec un lecteur d'écran</a></li>
+					<li>
+						<ol>
+		<li><a lang="en" href="1-slider.html">Slider</a></li>
+		<li><a lang="en" href="2-progressbar.html">Progressbar</a></li>
+		<li><a lang="en" href="3-dialog.html">Dialog / Alert Dialog</a></li>
+		<li><a lang="en" href="4-tabpanel.html">Tabpanel</a></li>
+		<li><a lang="en" href="5-tooltip.html">Tooltip</a></li>
+		<li><a lang="en" href="6-button.html">Button</a></li>
+		<li><a lang="en" href="7-checkbox.html">Checkbox</a></li>
+		<li><a lang="en" href="8-menubar.html">Menubar</a></li>
+		<li><a lang="en" href="9-accordion.html">Accordion</a></li>
+		<li><a lang="en" href="10-tree.html">Tree</a></li>
+		<li><a lang="en" href="11-datepicker.html">DatePicker</a></li>
+		<li><a lang="en" href="12-autocomplete.html">Autocomplete</a></li>
+						</ol>
+					</li>
+<li><a href="ressources.html">4. Ressources</a></li>
+				</ul>
+			</nav>
+
+  			<div class="github-link">
+  				<p><a title="Contribuer sur Github" href="https://github.com/DISIC/guide-lecteurs_ecran">Contribuer / Télécharger</a></p>
+  				</div>
+  			</div>
+  		</div>
+
+	<div id="wrapper">
+
+		<nav role="navigation" class="internav clear">
+			<ul>
+				<li><a class="next" href="lecteur-ecran.html">Qu'est-ce qu'un lecteur d'écran&nbsp;?<span aria-hidden="true"> &raquo; </span></a></li>
+			</ul>
+		</nav>
+
+		<main id="main" role="main">
+			<h1 class="fiche-title">Introduction</h1>
+			<!--intro -->
+			<article class="article">
+				<p>Ce guide vous est proposé dans le cadre des ressources accompagnant la prise en main de la version 3 du référentiel général d'accessibilité pour les administrations (RGAA 3).</p>
+				<p>Le RGAA 3 est composé d'un <a href="http://references.modernisation.gouv.fr/rgaa/">document d'introduction</a>, d'un <a href="http://references.modernisation.gouv.fr/rgaa-accessibilite/guide-accompagnement-RGAA.html">guide d'accompagnement</a> et d'un <a href="http://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html">référentiel technique</a>. Cet ensemble de documents a une portée règlementaire puisqu'ils ont été rendus officiels par l'<a href="http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000030540064&amp;dateTexte=20150921">arrêté du 29 avril 2015</a>, lui-même venant préciser l'<a href="http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000809647&amp;fastPos=1&amp;fastReqId=1497340759&amp;categorieLien=cid&amp;oldAction=rechTexte#LEGIARTI000006682279">article 47 de la loi 2005-102 du 11 février 2005</a> et l'<a href="http://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000030540064&amp;categorieLien=id">arrêté 2009-546 du 14 mai 2009</a>.</p>
+				<p>Les ressources complémentaires sont des supports sans valeur règlementaire et visent à vous aider à rendre vos contenus numériques accessibles et conformes au RGAA 3.</p>
+			</article>
+			<article class="article">
+				<h2 id="qui">À qui s'adresse ce guide ?</h2>
+				<p>Ce guide s'adresse à toute personne souhaitant évaluer l'accessibilité de ses composants HTML/JavaScript à l'aide d'un lecteur d'écran.</p>
+				<p>Il n'est pas nécessaire de savoir se servir d'un lecteur d'écran pour lire ce guide puisqu'une partie de celui-ci vous expliquera comment installer, configurer et utiliser ces lecteurs d'écran.</p>
+				<p>Ce document n'a pas pour vocation de vous former à l'utilisation quotidienne d'un lecteur d'écran. Son but est de vous donner les éléments pour évaluer l'accessibilité des composants que vous aurez insérés dans votre site.</p>
+				<p>Le guide expliquera d'abord ce qu'est un lecteur d'écran et comment l'utiliser. Il détaillera les procédures de tests de restitution pour chaque composant en s'appuyant sur les exemples de la <a href="http://disic.github.io/rgaa_composants_javascript/#test0">bibliothèque de référence des composants ARIA</a>, avec chacun des lecteurs d'écran.</p>
+			</article>
+			<article class="article">
+				<h2 id="quels">Lecteurs d'écran traités dans ce guide</h2>
+				<p>Ce document se limite aux lecteurs d'écran de la <a href="http://references.modernisation.gouv.fr/rgaa/base-de-reference.html">base de référence</a> du RGAA&nbsp;: JAWS, NVDA et VoiceOver.</p>
+				<blockquote>
+					<p>La base de référence est constituée des configurations (technologie d’assistance, système d’exploitation, navigateur) qui permettent de déclarer qu’un dispositif HTML5/ARIA est «&#8239;<a href="http://references.modernisation.gouv.fr/rgaa/glossaire.html#compatible-avec-les-technologies-dassistance">compatible avec l’accessibilité</a>&#8239;» tel que défini par WCAG.</p>
+					<p>Elle est établie par consensus à partir de la liste des technologies d’assistance dont l’usage est suffisamment répandu, ou, dans certains cas lorsqu’elle est fournie de manière native et constitue le moyen privilégié d’accès à l’information et aux fonctionnalités.</p>
+				</blockquote>
+				<p>Lors de la mise à jour du RGAA vers la version 3 2016, cette base de référence a été mise à jour. Ces modifications s'appuient sur une étude réalisée par la Fédération des Aveugles de France.</p>
+				<p>Les conclusions de cette étude indiquent&nbsp;:</p>
+				<blockquote>
+					<p>Les chiffres issus de cette première version de l’enquête montrent que le lecteur d'écran JAWS est majoritairement utilisé aujourd'hui (49,2&#8239;%) en France et en francophonie. Suivent NVDA (21,5&#8239;%) et VoiceOver (16,8&#8239;%). ZoomText niveau&nbsp;2 (<span lang="en">Screen Reader</span>) est utilisé par près de 6&#8239;% des utilisateurs alors qu'Orca (1,8&#8239;%) et SuperNova (1,2&#8239;%) sont utilisés dans de moindres proportions.</p>
+					<cite><a href="http://www.aveuglesdefrance.org/sites/default/files/2016-06/Rapport_final_Etude-lecteurs-ecran-France-Francophonie_01062016.docx">«&#8239;Étude sur l’usage des lecteurs d’écran en France et en Francophonie&#8239;» (mai&nbsp;2016 - Word 693&nbsp;ko)</a></cite>
+				</blockquote>
+					<p>La base de référence a donc été mise à jour et propose deux combinaisons.</p>
+					<ol>
+						<li>Première combinaison&nbsp;: 
+							<ul>
+								<li>utilisation de Windows avec la dernière version de NVDA et Firefox&nbsp;;</li>
+								<li>utilisation de Windows avec JAWS version n-1 et Firefox ou Internet Explorer&nbsp;9+&nbsp;;</li>
+								<li>utilisation de MacOS avec VoiceOver et Safari dernières versions.</li></ul></li>
+						<li>Seconde combinaison&nbsp;: 
+								<ul>
+										<li>utilisation de Windows avec JAWS version n-1 et Firefox&nbsp;;</li>
+										<li>utilisation de Windows avec la dernière version de NVDA et Firefox ou Internet Explorer&nbsp;9+&nbsp;;</li>
+										<li>utilisation de MacOS avec VoiceOver et Safari dernières versions.</li></ul>
+						</li>
+					</ol>
+				</article>
+
+								</main>
+
+<footer id="footer" role="contentinfo" class="clear">
+		<h2>Licence d'utilisation</h2>
+		<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l'action publique"></a></p>
+		<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l'action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+	</footer>
+
+							</div>
+
+							<script src="js/script.js"></script>
+
+						</body>
+						</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>Comment un lecteur d’écran restitue l’information - Guide sur les lecteurs d'écran</title>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+	<div class="main-header">
+
+		<div class="inside">
+			<ul class="skip-links">
+				<li><a href="#main">contenu</a></li>
+				<li><a href="#navigation">navigation</a></li>
+			</ul>
+
+			<header role="banner" class="header  clear" id="banner">
+				<h1 class="title">Guide sur les lecteurs d'écran</h1>
+			</header>
+
+			<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+				<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+				<ul class="sommaire is-hidden" id="sommaireToggle">
+					<li><a href="index.html">1. Introduction</a></li>
+					 <li>
+					 	<ul>
+							<li><a href="lecteur-ecran.html">Qu'est-ce qu'un lecteur d'écran&nbsp;?</a></li>
+					  <li><a href="environnement.html">À chaque environnement, ses lecteurs d’écran</a></li>
+				  	<li><a href="restitution.html">Comment un lecteur d'écran restitue l'information</a></li>
+						</ul>
+					 </li>
+						<li><a href="installation-config.html">2. Installation et configuration des lecteurs d’écran</a></li>
+						<li>
+							<ul>
+							<li><a href="jaws.html">Installation et configuration de <span lang="en">JAWS</span></a></li>
+					  <li><a href="nvda.html">Installation et configuration de NVDA</a></li>
+					  <li><a href="voiceover.html">Installation et configuration de <span lang="en">VoiceOver</span></a></li>
+						</ul>
+						</li>	
+					<li><a href="composants.html">3. Tester des composants ARIA avec un lecteur d'écran</a></li>
+					<li>
+						<ol>
+		<li><a lang="en" href="1-slider.html">Slider</a></li>
+		<li><a lang="en" href="2-progressbar.html">Progressbar</a></li>
+		<li><a lang="en" href="3-dialog.html">Dialog / Alert Dialog</a></li>
+		<li><a lang="en" href="4-tabpanel.html">Tabpanel</a></li>
+		<li><a lang="en" href="5-tooltip.html">Tooltip</a></li>
+		<li><a lang="en" href="6-button.html">Button</a></li>
+		<li><a lang="en" href="7-checkbox.html">Checkbox</a></li>
+		<li><a lang="en" href="8-menubar.html">Menubar</a></li>
+		<li><a lang="en" href="9-accordion.html">Accordion</a></li>
+		<li><a lang="en" href="10-tree.html">Tree</a></li>
+		<li><a lang="en" href="11-datepicker.html">DatePicker</a></li>
+		<li><a lang="en" href="12-autocomplete.html">Autocomplete</a></li>
+						</ol>
+					</li>
+<li><a href="ressources.html">4. Ressources</a></li>
+				</ul>
+			</nav>
+
+			<div class="github-link">
+				<p>
+					<a title="Contribuer / Télécharger sur Github" href="https://github.com/DISIC/guide-lecteurs_ecran">Contribuer / Télécharger</a>
+
+				</p>
+			</div>
+		</div>
+	</div>
+
+		<div id="wrapper">
+			<nav role="navigation" class="internav clear">
+				<ul>
+					<li><a class="prev" href="environnement.html"><span aria-hidden="true"> &laquo; </span> À chaque environnement, ses lecteurs d’écran</a></li>
+					<li><a class="next" href="installation-config.html"> 2. Installation et configuration des lecteurs d’écran<span aria-hidden="true"> &raquo; </span></a></li>
+				</ul>
+			</nav>
+
+			<main id="main" role="main">
+				<h1 class="fiche-title">Comment un lecteur d’écran restitue l’information</h1>
+
+				<article class="article">
+					<p>Le fonctionnement des lecteurs d'écran diffère entre Mac et Windows. Nous détaillons ci-après comment cela se passe dans chacun des deux systèmes d'exploitation.</p>
+				</article>
+
+				<article class="article">
+					<h2 id="restitwindows">Restitution des lecteurs d'écran sous Windows</h2>
+					<p>Même si les raccourcis clavier utilisés sont différents, <span lang="en">JAWS</span> et NVDA fonctionnent de façon similaire pour restituer l'information. Comme évoqué dans le paragraphe <a href="lecteur-ecran.html#fonctionnement">Fonctionnement des lecteurs d'écran</a>, les lecteurs d'écran restituent les informations provenant du système d'exploitation et des applications.</p>
+					<p>Dans le cas précis du navigateur web, l'information est restituée à la fois via le DOM et les API d'accessibilité.</p>
+					<p><span lang="en">JAWS</span> et NVDA <strong>restituent l'information sous forme de deux modes</strong>&nbsp;:</p>
+					<ul>
+						<li>Le «&nbsp;mode virtuel&nbsp;» sous <span lang="en">JAWS</span> et le «&nbsp;mode de navigation&nbsp;» par NVDA. Pour des raisons de simplicité, nous appellerons ce mode le «&nbsp;mode navigation&nbsp;» dans le reste du document.</li>
+						<li>Le mode formulaire. Il porte le même nom dans les deux lecteurs d'écran.</li>
+					</ul>
+					</article>
+
+					<article class="article">
+					<h3>Le mode navigation</h3>
+						<p>Ce mode permet d'explorer le document, de le lire et de naviguer à l'intérieur.</p>
+						<p>Lorsqu'on arrive sur une page web, <strong>on est par défaut dans le mode navigation</strong>. Le lecteur d'écran restitue le contenu de la page sous forme d'un texte linéaire, c'est-à-dire, dans l'ordre dans lequel les contenus se présentent dans le code.</p>
+						<p>Pour ce faire, il utilise ce qui s'appelle le <strong>«&nbsp;tampon virtuel&nbsp;»</strong> dans lequel une copie du contenu est stocké pour être vocalisé. Certaines interactions entre l'utilisateur et le contenu utilisent également le «&nbsp;tampon virtuel&nbsp;».</p>
+						<p>Dans le mode navigation, le texte est restitué à l'utilisateur sans formatage, changement de police ou styles.</p>
+						<p>Par exemple, si la page présente deux colonnes de texte, visuellement positionnées l'une à côté de l'autre, ces colonnes seront parcourues par le lecteur d'écran l'une après l'autre. Il n'existe pas d'élément «&nbsp;colonne&nbsp;» en HTML, donc le lecteur d'écran ne signalera pas que le contenu est structuré en colonne. En revanche, il s'appuie sur la sémantique des éléments du HTML retransmises par le navigateur pour restituer la nature des éléments telle que les titres et leurs niveaux, les liens et leurs états, les listes, les images, etc.</p>
+						<p>L'appui sur les flèches de direction permet de déplacer le focus du lecteur d'écran de caractère en caractère (flèche droite et gauche) et de ligne en ligne (flèches bas et haut), sans pour autant faire défiler la page. Pour cette raison, il est difficile pour une personne voyant l'écran de comprendre où se trouve l'utilisateur de lecteur d'écran lorsqu'il parcourt une page.</p>
+						<h4>Verbosité</h4>
+						<p>Lorsqu'il vocalise une page web, <strong>le lecteur d'écran fournit des informations supplémentaires à l'utilisateur, qui ne sont pas affichées sur la page web</strong>. Cette verbosité déroute les personnes qui ne maîtrisent pas le fonctionement d'un lecteur d'écran. Ainsi, lorsque le navigateur affiche une image servant de lien, le lecteur d'écran annoncera&nbsp;: «&nbsp;lien graphique&nbsp;» suivi de l'intitulé du lien. Sur une liste à puces, il vocalisera&nbsp;: «&nbsp;liste de x éléments&nbsp;». Il pourra également annoncer si un lien a déjà été visité. Lorsqu'il arrivera sur un titre de niveau 2, il dira «&nbsp;titre de niveau 2&nbsp;» suivi de l'intitulé de ce titre.</p>
+						<h4>Raccourcis clavier</h4>
+						<p>Quand la page est bien structurée à l'aide de titres, de listes, de liens, l'utilisateur peut se servir de <strong>raccourcis clavier pour se déplacer d'un élément à l'autre sur la page</strong>&nbsp;: par exemple, l'appui sur <kbd>h</kbd> pour NVDA et <kbd>T</kbd> pour <span lang="en">JAWS</span>, permet d'aller au titre de niveau Hx suivant. <kbd>F</kbd> déplace le curseur au prochain champ de formulaire, <kbd>l</kbd> à la prochaine liste à puces ou numérotée, <kbd>t</kbd> pour NVDA et <kbd>Y</kbd> pour <span lang="en">JAWS</span> déplacent le curseur au tableau suivant.</p>
+						<p>Il est également possible de demander au lecteur d'écran d'afficher, à l'aide d'un raccourci clavier spécifique, une liste de liens, de champs de formulaires ou des titres présents sur la page.</p>
+					</article>
+
+					<article class="article">
+						<h3>Le mode formulaire</h3>
+						<p>Ce mode permet à l'utilisateur <strong>d'interagir avec le contenu</strong>&nbsp;: éditer du texte, cocher une case ou un bouton, dérouler une boîte de liste.</p>
+						<p>Lorsqu'un composant interactif est présent sur la page, le lecteur d'écran quitte le mode navigation et passe dans le mode formulaire, que l'on appelle aussi parfois «&nbsp;le mode application&nbsp;». Pour des raisons de simplicité, nous ne ferons pas de distinction entre mode formulaire et mode application, puisqu'en définitive, c'est le même. Nous appellerons ce mode le «&nbsp;mode formulaire&nbsp;» dans le reste du document.</p>
+						<p>Lorsque l'utilisateur passe dans le mode formulaire, l'appui sur les lettres <strong>ne permet plus de déplacer le focus à un élément donné</strong>, mais de saisir du texte et d'interagir avec l'élément à l'aide des raccourcis clavier spécifiques prévus par la spécification HTML lorsque il s'agit d'un élément natif ou par l'API ARIA lorsqu'il s'agit d'un composant développé avec JavaScript.</p>
+						<p>Sous <span lang="en">JAWS</span>, le mode formulaire s'active en appuyant sur la touche <kbd>Entrée</kbd>, sous NVDA en appuyant sur <kbd>Entrée</kbd> ou <kbd>NVDA&nbsp;+&nbsp;Espace</kbd>.</p>
+						<p>Pour en savoir plus sur les modes navigation, formulaire et application, consulter l'article de Léonie Watson, <a href="http://tink.uk/understanding-screen-reader-interaction-modes/" ><i lang="en">Understanding screen reader interaction modes</i></a> (article en anglais).</p>
+						<p>Cet article explique notamment le comportement du lecteur d'écran dans un système d'onglets&nbsp;:</p>
+						<blockquote>
+							<p>Lorsqu’on interagit avec des onglets dans une application logicielle, les flèches gauche/droite déplacent le curseur en boucle entre chacun des onglets. Lorsqu’un système d’onglets est transposé dans un document web, le même modèle d’interaction est géré par le script proposant la fonctionnalité du widget. C’est là que réside le défi : un lecteur d’écran sous Windows interceptera l’appui sur les touches gauche/droite et l’utilisera pour déplacer le focus dans le tampon virtuel au lieu de passer la main au navigateur pour interagir avec les onglets.</p>
+						</blockquote>
+						<p>La majorité des utilisateurs naviguent sur les pages web grâce au mode navigation. Cependant, lorsque vous devrez tester les composants étudiés plus loin dans ce guide, <strong>vous devrez vous servir de la touche de tabulation</strong>. C'est l'une des seules touches qui n'est pas interceptée directement par le lecteur d'écran. L'appui sur cette touche est automatiquement récupéré par le navigateur, ce qui déclenche le déplacement du focus vers l'élément suivant&nbsp;: lien, champ de formulaire, composant. Il en est de même, lorsqu'on appuie sur <kbd>Entrée</kbd> pour activer un lien ou <kbd>Espace</kbd> pour cocher une case à cocher.</p>
+					</article>
+					<article class="article">
+						<h2 id="restitmac">Restitution de <span lang="en">VoiceOver</span> sous Mac</h2>
+						<p>La restitution de l'information par le lecteur d'écran <span lang="en">VoiceOver</span> sous MacOS est différente de celle faite sous Windows par <span lang="en">JAWS</span> ou NVDA.</p>
+						<p>Alors que les lecteurs d'écran sous Windows reformatent l'information pour la présenter d'une façon plus textuelle à l'utilisateur, la philosophie d'Apple est de faire naviguer l'utilisateur un peu comme une personne voyant l'écran.</p>
+						<p>Le lecteur d'écran affiche les différents composants d'une application et propose à l'utilisateur de se déplacer de l'un à l'autre grâce à une combinaison de touches spécifiques. On peut ainsi aller à la barre de menus, à la barre d'outils, au contenu de l'application ou à sa barre de titre. Une fois qu'on a atteint la zone que l'on souhaite explorer, on interagit avec un raccourci dédié pour entrer dans cette zone.</p>
+						<p>Sur les pages web, il en est de même. Il faut interagir avec ce que <span lang="en">VoiceOver</span> appelle la zone HTML avant de pouvoir la lire.</p>
+						<p>Il <strong>n'existe pas vraiment de mode navigation ou mode formulaire</strong>. Lorsqu'on lit une page web et qu'on arrive sur un champ de saisie, on peut directement saisir l'information dans le champ.</p>
+						<p>On peut néanmoins paramétrer <span lang="en">VoiceOver</span> pour qu'il passe en <strong>mode navigation rapide</strong> en appuyant simultanément sur les flèches droite et gauche pour activer ce mode. On peut alors, à l'aide de raccourcis clavier spécifiques, naviguer de titre en titre, de lien en lien, de champ de formulaire en champ de formulaire, etc. Il est aussi possible d'utiliser le mode de navigation rapide avec des touches uniques (voir le chapitre sur la configuration de <span lang="en">VoiceOver</span>). Ainsi, en appuyant sur <kbd>h</kbd>, on ira au prochain titre, sur <kbd>l</kbd> à la prochaine liste, ainsi de suite.</p>
+						<p>En ce qui concerne les composants riches, pour interagir avec eux, il sera nécessaire d'appuyer sur le raccourci qui permet cette interaction.</p>
+					</article>
+
+				</main>
+
+				<footer id="footer" role="contentinfo" class="clear">
+					<h2>Licence d'utilisation</h2>
+					<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l'action publique"></a></p>
+					<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l'action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+				</footer>
+
+			</div>
+
+			<script src="js/script.js"></script>
+
+		</body>
+		</html>				
+
+

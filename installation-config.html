@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>Installation et configuration des lecteurs d’écran - Guide sur les lecteurs d'écran</title>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+	<div class="main-header">
+
+		<div class="inside">
+			<ul class="skip-links">
+				<li><a href="#main">contenu</a></li>
+				<li><a href="#navigation">navigation</a></li>
+			</ul>
+
+			<header role="banner" class="header  clear" id="banner">
+				<h1 class="title">Guide sur les lecteurs d'écran</h1>
+			</header>
+
+			<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+				<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+				<ul class="sommaire is-hidden" id="sommaireToggle">
+					<li><a href="index.html">1. Introduction</a></li>
+					 <li>
+					 	<ul>
+							<li><a href="lecteur-ecran.html">Qu'est-ce qu'un lecteur d'écran&nbsp;?</a></li>
+					  <li><a href="environnement.html">À chaque environnement, ses lecteurs d’écran</a></li>
+				  	<li><a href="restitution.html">Comment un lecteur d'écran restitue l'information</a></li>
+						</ul>
+					 </li>
+						<li><a href="installation-config.html">2. Installation et configuration des lecteurs d’écran</a></li>
+						<li>
+							<ul>
+							<li><a href="jaws.html">Installation et configuration de <span lang="en">JAWS</span></a></li>
+					  <li><a href="nvda.html">Installation et configuration de NVDA</a></li>
+					  <li><a href="voiceover.html">Installation et configuration de <span lang="en">VoiceOver</span></a></li>
+						</ul>
+						</li>	
+					<li><a href="composants.html">3. Tester des composants ARIA avec un lecteur d'écran</a></li>
+					<li>
+						<ol>
+		<li><a lang="en" href="1-slider.html">Slider</a></li>
+		<li><a lang="en" href="2-progressbar.html">Progressbar</a></li>
+		<li><a lang="en" href="3-dialog.html">Dialog / Alert Dialog</a></li>
+		<li><a lang="en" href="4-tabpanel.html">Tabpanel</a></li>
+		<li><a lang="en" href="5-tooltip.html">Tooltip</a></li>
+		<li><a lang="en" href="6-button.html">Button</a></li>
+		<li><a lang="en" href="7-checkbox.html">Checkbox</a></li>
+		<li><a lang="en" href="8-menubar.html">Menubar</a></li>
+		<li><a lang="en" href="9-accordion.html">Accordion</a></li>
+		<li><a lang="en" href="10-tree.html">Tree</a></li>
+		<li><a lang="en" href="11-datepicker.html">DatePicker</a></li>
+		<li><a lang="en" href="12-autocomplete.html">Autocomplete</a></li>
+						</ol>
+					</li>
+<li><a href="ressources.html">4. Ressources</a></li>
+				</ul>
+			</nav>
+
+							<div class="github-link">
+				<p>
+					<a title="Contribuer / Télécharger sur Github" href="https://github.com/DISIC/guide-lecteurs_ecran">Contribuer / Télécharger</a>
+
+				</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="wrapper">
+
+			<nav role="navigation" class="internav clear">
+				<ul>
+					<li><a class="prev" href="restitution.html"><span aria-hidden="true"> &laquo; </span> Comment un lecteur d’écran restitue l’information</a></li>
+					<li><a class="next" href="jaws.html">Installation et configuration de JAWS <span aria-hidden="true"> &raquo; </span></a></li>
+				</ul>
+			</nav>
+
+			<main id="main" role="main">
+				<h1 class="fiche-title">Installation et configuration des lecteurs d’écran</h1>
+				<article class="article">
+					<h2 id="avantinstall">Avant de commencer</h2>
+					<p>Chaque lecteur d'écran a son propre fonctionnement. Hormis pour <span lang="en">VoiceOver</span>, il est nécessaire de télécharger et d'installer le lecteur d'écran avant de le lancer et de le configurer.</p>
+					<p>Chaque outil dispose d'un menu de configuration que l'on active grâce à un raccourci clavier. Certaines modifications peuvent néanmoins se faire «&nbsp;à la volée&nbsp;», c'est-à-dire sans passer par le menu de configuration. C'est le cas, par exemple pour régler la vitesse de la synthèse vocale, sa langue ou le texte à annoncer (par caractères ou par mots). </p>
+					<p>Chacun des lecteurs d'écran dispose d'une <strong>touche dédiée</strong>, qui, combinée avec d'autres touches, permettent d'exécuter un raccourci clavier propre au lecteur d'écran.</p>
+					<p>Pour JAWS et NVDA, il s'agit principalement de la touche <kbd>Insert</kbd> du clavier ou du pavé numérique. Sur les ordinateurs portables, on peut aussi demander au lecteur d'écran d'utiliser la touche verrouillage majuscules <kbd>Verr maj</kbd>. Cette touche du lecteur d'écran est appelée la touche JAWS / la touche NVDA. </p>
+					<p><span lang="en">VoiceOver</span> utilise, quant à lui, les touches <kbd>Contrôle&nbsp;+&nbsp;Option</kbd>, que nous appellerons VO.</p>
+				
+					<p>Vous pouvez configurer la touche VO dans l'onglet «&nbsp;Général&nbsp;» de l'utilitaire <span lang="en">VoiceOver</span>, «&nbsp;Touches de modification à utiliser pour VoiceOver&nbsp;», vous avez le choix entre <kbd>Contrôle&nbsp;+&nbsp;Option</kbd>, <kbd>Verr maj</kbd> et <kbd>Contrôle&nbsp;+&nbsp;Option</kbd> ou <kbd>Verr maj</kbd>.</p>
+					
+					<div class="centre">
+					<img src="img/VoiceOver/config_vo.png" alt="">
+					</div>
+
+					<p>Voici comment nous décrirons les raccourcis des lecteurs d'écran&nbsp;:</p>
+					<p>Par exemple, pour lire le titre de la fenêtre/application&nbsp;:</p>
+					<ul>
+						<li>Avec JAWS, <strong>appuyer sur <kbd>JAWS&nbsp;+&nbsp;T</kbd></strong> signifie que vous devez appuyer simultanément sur la touche <kbd>Insert</kbd> du clavier ou du pavé numérique (ou sur la touche <kbd>Verr maj</kbd>) et sur avec la touche <kbd>t</kbd>.</li>
+						<li>Avec NVDA, <strong>appuyer sur <kbd>NVDA&nbsp;+&nbsp;T</kbd></strong> signifie que vous devez appuyer simultanément sur la touche <kbd>Insert</kbd> du clavier ou du pavé numérique, ou sur la touche <kbd>Verr maj</kbd>, simultanément avec la touche <kbd>t</kbd>.</li>
+						<li>Avec <span lang="en">VoiceOver</span>, <strong>appuyer sur les touches <kbd>VO&nbsp;+&nbsp;t</kbd></strong> signifie que vous devez appuyer simultanément sur les touches <kbd>Contrôle&nbsp;+&nbsp;Option&nbsp;+&nbsp;t</kbd>.</li>
+					</ul>
+				</article>
+
+				</main>
+
+				<footer id="footer" role="contentinfo" class="clear">
+					<h2>Licence d'utilisation</h2>
+					<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l'action publique"></a></p>
+					<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l'action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+				</footer>
+
+			</div>
+
+			<script src="js/script.js"></script>
+
+		</body>
+		</html>

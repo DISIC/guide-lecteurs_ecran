@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title>Accordion - Guide sur les lecteurs d'écran</title>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/styles.css" media="all">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+	<div class="main-header">
+
+		<div class="inside">
+			<ul class="skip-links">
+				<li><a href="#main">contenu</a></li>
+				<li><a href="#navigation">navigation</a></li>
+			</ul>
+
+			<header role="banner" class="header  clear" id="banner">
+				<h1 class="title">Guide sur les lecteurs d'écran</h1>
+			</header>
+
+			<nav role="navigation" class="gp-sommaire" id="navigation" aria-label="Sommaire du guide">
+				<button id="btnSommaire" aria-expanded="false">Sommaire</button>
+				<ul class="sommaire is-hidden" id="sommaireToggle">
+					<li><a href="index.html">1. Introduction</a></li>
+					 <li>
+					 	<ul>
+							<li><a href="lecteur-ecran.html">Qu'est-ce qu'un lecteur d'écran&nbsp;?</a></li>
+					  <li><a href="environnement.html">À chaque environnement, ses lecteurs d’écran</a></li>
+				  	<li><a href="restitution.html">Comment un lecteur d'écran restitue l'information</a></li>
+						</ul>
+					 </li>
+						<li><a href="installation-config.html">2. Installation et configuration des lecteurs d’écran</a></li>
+						<li>
+							<ul>
+							<li><a href="jaws.html">Installation et configuration de <span lang="en">JAWS</span></a></li>
+					  <li><a href="nvda.html">Installation et configuration de NVDA</a></li>
+					  <li><a href="voiceover.html">Installation et configuration de <span lang="en">VoiceOver</span></a></li>
+						</ul>
+						</li>	
+					<li><a href="composants.html">3. Tester des composants ARIA avec un lecteur d'écran</a></li>
+					<li>
+						<ol>
+		<li><a lang="en" href="1-slider.html">Slider</a></li>
+		<li><a lang="en" href="2-progressbar.html">Progressbar</a></li>
+		<li><a lang="en" href="3-dialog.html">Dialog / Alert Dialog</a></li>
+		<li><a lang="en" href="4-tabpanel.html">Tabpanel</a></li>
+		<li><a lang="en" href="5-tooltip.html">Tooltip</a></li>
+		<li><a lang="en" href="6-button.html">Button</a></li>
+		<li><a lang="en" href="7-checkbox.html">Checkbox</a></li>
+		<li><a lang="en" href="8-menubar.html">Menubar</a></li>
+		<li><a lang="en" href="9-accordion.html">Accordion</a></li>
+		<li><a lang="en" href="10-tree.html">Tree</a></li>
+		<li><a lang="en" href="11-datepicker.html">DatePicker</a></li>
+		<li><a lang="en" href="12-autocomplete.html">Autocomplete</a></li>
+						</ol>
+					</li>
+<li><a href="ressources.html">4. Ressources</a></li>
+				</ul>
+			</nav>
+
+							<div class="github-link">
+				<p>
+					<a title="Contribuer / Télécharger sur Github" href="https://github.com/DISIC/guide-lecteurs_ecran">Contribuer / Télécharger</a>
+
+				</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="wrapper">
+
+			<nav role="navigation" class="internav clear">
+				<ul>
+					<li><a class="prev" lang="en" href="8-menubar.html"><span aria-hidden="true"> &laquo; </span> Menubar</a></li>
+					<li><a class="next" lang="en" href="10-tree.html">Tree <span aria-hidden="true"> &raquo; </span></a></li>
+				</ul>
+			</nav>
+
+			<main id="main" role="main">
+				<h1 class="fiche-title" lang="en">Accordion</h1>
+				<article class="article">
+					<div class="centre">
+						<img src="img/accordion.jpg" alt="" />
+					</div>
+
+
+					<p>Ce composant permet d'implémenter des contenus en accordéon&nbsp;: le contenu de chaque panneau est affiché lorsque le titre du panneau est activé.</p>
+					<h3>Restitution</h3>
+					<ul>
+						<li>Chaque panneau doit posséder un <a href="https://www.w3.org/TR/accname-aam-1.1/#dfn-accessible-name"><strong>nom accessible</strong> (ressource en anglais)</a>.</li>
+						<li>le panneau actif et sa position dans la liste des panneaux doit être vocalisé.</li>
+						<li>l'état affiché d'un panneau doit être vocalisé.</li>
+						<li>le contenu de chaque panneau est vocalisé automatiquement ou sur action de l'utilisateur lorsqu'il interagit avec le contenu.</li>
+					</ul>
+					<h3>Interactions de base au clavier</h3>
+					<p>Les interactions au clavier sont&nbsp;:</p>
+					<ul>
+						<li>Sur le titre d'un panneau, les touches <kbd>Espace</kbd> et <kbd>Entrée</kbd> affichent ou ferment le panneau associé.</li>
+						<li>Les flèches <kbd>haut</kbd> ou <kbd>droite</kbd> permettent de sélectionner le panneau précédent.</li>
+						<li>Les flèches <kbd>bas</kbd> ou <kbd>gauche</kbd> permettent de sélectionner le panneau suivant.</li>
+						<li>La touche <kbd>Majuscule&nbsp;&nbsp;+&nbsp;&nbsp;Tabulation</kbd> permet d'atteindre le premier titre de panneau affiché et les éléments interactifs du ou des panneaux affichés dans l'ordre de la séquence de tabulation (en <em>avant</em> ou en <em>arrière</em>).</li>
+					</ul>
+					<p><strong>Motif de conception</strong>&nbsp;: <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion" lang="en">Accordion</a> (<span lang="en">WAI-ARIA Authoring Practices 1.1</span>)</p>		
+					<h3><a href="http://disic.github.io/rgaa_composants_javascript/#accordion">Exemple d'<span lang="en">accordion</span></a></h3>
+				</article>
+				<article class="article"><h2>Test de l'accordéon avec JAWS</h2>
+					<h3>Étape 1</h3>
+					<ol>
+					<li>Utiliser la touche <kbd>Tabulation</kbd> jusqu'à l'accordéon. <br />JAWS active le mode formulaire et annonce&nbsp;: «&nbsp;Onglet, panneau 1, utiliser touche jaws&nbsp;+&nbsp;alt&nbsp;+&nbsp;r pour lire le descriptif. Pour activer cet onglet, barre d'espace&nbsp;».</li>
+					<li>Se déplacer avec les flèches de direction d'un panneau à l'autre. JAWS annonce&nbsp;: «&nbsp;onglet panneau X&nbsp;».</li>
+					</ol>
+		<h3>Étape 2</h3>
+		<ol>
+			<li>Activer le panneau avec la touche <kbd>Entrée</kbd>. JAWS annonce «&nbsp;onglet Panneau [x], sélectionné&nbsp;».</li>
+					<li>Utiliser la touche <kbd>Tabulation</kbd> pour accéder au contenu du panneau. <br />JAWS quitte le mode formulaire et annonce «&nbsp;document&nbsp;» et lit le contenu.</li>
+					<li>Sélectionner le deuxième onglet. JAWS lit le contenu du panneau.</li>
+		</ol>
+		<h3>Étape 3</h3>
+				<ol>
+					
+					
+					<li>Retourner dans la liste des onglets à l'aide des touches <kbd>Majuscule&nbsp;+&nbsp;Tabulation</kbd>. JAWS annonce&nbsp;: «&nbsp;onglet panneau X&nbsp;».</li>
+					<li>Sortir de l'accordéon à l'aide de la touche <kbd>Tabulation</kbd>. Lorsqu'on quitte la liste des onglets, JAWS quitte le mode formulaire. Il n'annonce pas lorsqu'on quitte l'accordéon.</li>
+				</ol>
+			</article><article class="article"><h2>Test de l'accordéon avec NVDA</h2>
+
+				<h3>Étape 1</h3>
+				<ol>
+				<li>Utiliser la touche <kbd>Tabulation</kbd> jusqu'à l'accordéon. <br />NVDA active le mode formulaire et annonce&nbsp;: «&nbsp;Onglet, panneau 1, onglet 1 sur 3&nbsp;».</li>
+				<li>Se déplacer avec les flèches de direction d'un panneau à l'autre. NVDA annonce&nbsp;: «&nbsp;panneau X, onglet X sur 3&nbsp;».</li>
+				</ol>
+		<h3>Étape 2</h3>
+		<ol>
+			<li>Activer le panneau avec la touche <kbd>Entrée</kbd>. NVDA annonce «&nbsp;Panneau [x] sur [total], sélectionné&nbsp;».</li>
+				<li>Utiliser la touche <kbd>Tabulation</kbd> pour accéder au contenu du panneau. <br />NVDA quitte le mode formulaire et annonce «&nbsp;fenêtre développée&nbsp;».</li>
+				<li>Sélectionner le deuxième onglet. NVDA lit le contenu du panneau.</li>
+		</ol>
+		<h3>Étape 3</h3>
+		<ol>			
+				
+				<li>Retourner dans la liste des onglets à l'aide des touches <kbd>Majuscule&nbsp;+&nbsp;Tabulation</kbd>. NVDA annonce&nbsp;: «&nbsp;panneau X, onglet sélectionné, X sur total&nbsp;».</li>
+				<li>Sortir de l'accordéon à l'aide de la touche <kbd>Tabulation</kbd>.</li>
+			</ol>
+		</article><article class="article"><h2>Test de l'accordéon avec <span lang="en">VoiceOver</span></h2>
+		<h3>Étape 1</h3>
+		<ol>
+			<li>Utiliser la touche <kbd>Tabulation</kbd> jusqu'à l'accordéon. <span lang="en">VoiceOver</span> annonce&nbsp;: «&nbsp;panneau 1, onglet 1 sur 3&nbsp;».</li>
+			<li>Se déplacer avec les flèches de direction d'un panneau à l'autre. <span lang="en">VoiceOver</span> annonce&nbsp;: «&nbsp;panneau X, onglet X sur 3&nbsp;».</li>
+		</ol>
+		<h3>Étape 2</h3>
+		<ol>
+			<li>Activer le panneau avec les touches <kbd>VO&nbsp;+&nbsp;Espace</kbd>. L'appui sur la touche <kbd>Entrée</kbd> ne fonctionne pas. <span lang="en">VoiceOver</span> annonce&nbsp;: «&nbsp;appuyer Panneau [x], onglet [x] sur [total]».</li>
+			<li>Se positionner sur le contenu avec <kbd>VO&nbsp;+&nbsp;flèche droite</kbd>. Il faudra alors appuyer sur <kbd>VO&nbsp;+&nbsp;Maj&nbsp;+&nbsp;flèche vers le bas</kbd> pour interagir avec le contenu.</li>
+			<li>Utiliser les touches <kbd>VO&nbsp;+&nbsp;flèche droite</kbd> pour lire le contenu.</li>
+			<li>Retourner dans la liste des onglets à l'aide des touches <kbd>Tabulation</kbd> ou <kbd>Majuscule&nbsp;+&nbsp;Tabulation</kbd>. Sélectionner le deuxième onglet. <br /><span lang="en">VoiceOver</span> lit le contenu du panneau avec les touches <kbd>VO&nbsp;+&nbsp;flèche droite</kbd>.</li>
+		</ol>
+		<h3>Étape 3</h3>
+
+		<ol>
+
+			<li>Retourner dans la liste des onglets à l'aide des touches <kbd>Majuscule&nbsp;+&nbsp;Tabulation</kbd>. <span lang="en">VoiceOver</span> annonce&nbsp;: «&nbsp;panneau X, onglet sélectionné, X sur total&nbsp;».</li>
+			<li>Sortir de l'accordéon à l'aide de la touche <kbd>Tabulation</kbd>. <span lang="en">VoiceOver</span> n'annonce pas la sortie de l'accordéon.</li>
+		</ol>
+	</article>
+
+</main>
+
+<footer id="footer" role="contentinfo" class="clear">
+	<h2>Licence d'utilisation</h2>
+	<p class="logo-smgap"><a href="http://references.modernisation.gouv.fr/"><img src="img/modernisation-logo.jpg" alt="Secrétariat général pour le modernisation de l'action publique"></a></p>
+	<p>Ce document est la propri&#233;t&#233; du Secr&#233;tariat g&#233;n&#233;ral &#224; la modernisation de l'action publique fran&#231;ais (SGMAP). Il est plac&#233; sous la <a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence">licence ouverte 1.0 ou ult&#233;rieure</a>, &#233;quivalente &#224; une licence <i lang="en">Creative Commons BY</i>. Pour indiquer la paternit&#233;, ajouter un lien vers la version originale du document disponible sur le <a href="https://github.com/DISIC">compte <span lang="en">GitHub</span> de la DInSIC</a>.</p>
+
+</footer>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
